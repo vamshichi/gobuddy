@@ -1,0 +1,387 @@
+"use client"
+
+import { use } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
+import { Button } from "@/components/ui/button"
+import { MapPin, Clock, Star, Users, Calendar, Camera, Utensils, Hotel, Plane, ArrowRight, ChevronLeft } from "lucide-react"
+
+const destinationsData: Record<string, {
+  name: string
+  tagline: string
+  description: string
+  heroImage: string
+  images: string[]
+  rating: number
+  duration: string
+  bestTime: string
+  highlights: string[]
+  itinerary: { day: number; title: string; description: string }[]
+  inclusions: string[]
+  packages: { name: string; duration: string; features: string[] }[]
+}> = {
+  goa: {
+    name: "Goa",
+    tagline: "Beach Paradise of India",
+    description: "Experience the perfect blend of sun, sand, and culture in India's favorite beach destination. From pristine beaches to Portuguese heritage, Goa offers an unforgettable vacation.",
+    heroImage: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1920&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1587922546307-776227941871?w=800&q=80",
+      "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?w=800&q=80",
+      "https://images.unsplash.com/photo-1580581096469-8afb39cd0d56?w=800&q=80",
+    ],
+    rating: 4.8,
+    duration: "3-5 Days",
+    bestTime: "November - February",
+    highlights: ["Baga Beach", "Fort Aguada", "Old Goa Churches", "Dudhsagar Falls", "Night Markets", "Water Sports"],
+    itinerary: [
+      { day: 1, title: "Arrival & North Goa", description: "Airport pickup, check-in, explore Calangute & Baga beaches, evening at Tito's Lane." },
+      { day: 2, title: "Heritage Tour", description: "Visit Old Goa churches, Fort Aguada, Reis Magos Fort, sunset at Candolim beach." },
+      { day: 3, title: "South Goa & Departure", description: "Explore Palolem beach, visit spice plantations, optional water sports, departure." },
+    ],
+    inclusions: ["Accommodation", "Breakfast", "Airport Transfers", "Sightseeing", "Tour Guide"],
+    packages: [
+      { name: "Budget Explorer", duration: "3 Days / 2 Nights", features: ["3-star hotel", "Breakfast", "Shared transfers"] },
+      { name: "Premium Escape", duration: "4 Days / 3 Nights", features: ["4-star resort", "All meals", "Private cab", "Water sports"] },
+      { name: "Luxury Retreat", duration: "5 Days / 4 Nights", features: ["5-star beach resort", "All inclusive", "Private villa", "Spa session"] },
+    ],
+  },
+  kerala: {
+    name: "Kerala",
+    tagline: "God's Own Country",
+    description: "Discover the enchanting backwaters, lush hill stations, and rich cultural heritage of Kerala. A land of serene beauty and warm hospitality.",
+    heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=800&q=80",
+      "https://images.unsplash.com/photo-1609340089943-bec8d0a0b4db?w=800&q=80",
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&q=80",
+    ],
+    rating: 4.9,
+    duration: "4-6 Days",
+    bestTime: "September - March",
+    highlights: ["Alleppey Backwaters", "Munnar Tea Gardens", "Kochi Fort", "Periyar Wildlife", "Kovalam Beach", "Kathakali Show"],
+    itinerary: [
+      { day: 1, title: "Kochi Arrival", description: "Arrive at Cochin airport, explore Fort Kochi, Chinese fishing nets, evening Kathakali show." },
+      { day: 2, title: "Munnar Hills", description: "Drive to Munnar, visit tea plantations, Eravikulam National Park, local sightseeing." },
+      { day: 3, title: "Thekkady Wildlife", description: "Travel to Thekkady, Periyar boat safari, spice garden visit, tribal performance." },
+      { day: 4, title: "Alleppey Houseboat", description: "Board luxury houseboat, cruise through backwaters, overnight stay on boat." },
+      { day: 5, title: "Kovalam & Departure", description: "Disembark, drive to Kovalam beach, leisure time, departure from Trivandrum." },
+    ],
+    inclusions: ["Accommodation", "All Meals on Houseboat", "Transfers", "Sightseeing", "Boat Safari"],
+    packages: [
+      { name: "Backwater Bliss", duration: "4 Days / 3 Nights", features: ["Houseboat stay", "Kochi tour", "Transfers included"] },
+      { name: "Complete Kerala", duration: "5 Days / 4 Nights", features: ["Hill station + Backwaters", "All meals", "Private transfers"] },
+      { name: "Royal Kerala", duration: "7 Days / 6 Nights", features: ["Premium resorts", "Ayurveda spa", "Complete tour", "Flight tickets"] },
+    ],
+  },
+  dubai: {
+    name: "Dubai",
+    tagline: "City of Dreams",
+    description: "Experience the epitome of luxury in Dubai - from towering skyscrapers to golden deserts, this city offers unparalleled experiences.",
+    heroImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
+      "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80",
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&q=80",
+    ],
+    rating: 4.9,
+    duration: "4-6 Days",
+    bestTime: "November - March",
+    highlights: ["Burj Khalifa", "Dubai Mall", "Desert Safari", "Palm Jumeirah", "Dubai Marina", "Gold & Spice Souks"],
+    itinerary: [
+      { day: 1, title: "Arrival & City Tour", description: "Airport pickup, half-day city tour, Dubai Mall visit, Burj Khalifa at sunset." },
+      { day: 2, title: "Desert Safari", description: "Free morning, afternoon desert safari with BBQ dinner, belly dancing, camel ride." },
+      { day: 3, title: "Abu Dhabi Day Trip", description: "Full day Abu Dhabi tour, Sheikh Zayed Mosque, Heritage Village, Corniche." },
+      { day: 4, title: "Leisure & Departure", description: "Shopping at Gold Souk, Dubai Marina walk, evening departure." },
+    ],
+    inclusions: ["4-star Hotel", "Daily Breakfast", "Airport Transfers", "City Tour", "Desert Safari"],
+    packages: [
+      { name: "Dubai Express", duration: "4 Days / 3 Nights", features: ["4-star hotel", "City tour", "Desert safari", "Visa included"] },
+      { name: "Dubai Deluxe", duration: "5 Days / 4 Nights", features: ["5-star hotel", "Abu Dhabi tour", "Dhow cruise", "All transfers"] },
+      { name: "Dubai Ultimate", duration: "6 Days / 5 Nights", features: ["Luxury resort", "All attractions", "Private guide", "Premium experiences"] },
+    ],
+  },
+  maldives: {
+    name: "Maldives",
+    tagline: "Paradise on Earth",
+    description: "Escape to the pristine islands of Maldives where crystal-clear waters meet powder-white beaches. The ultimate romantic getaway.",
+    heroImage: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1920&q=80",
+    images: [
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80",
+      "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?w=800&q=80",
+    ],
+    rating: 5.0,
+    duration: "4-6 Days",
+    bestTime: "November - April",
+    highlights: ["Water Villas", "Snorkeling", "Diving", "Sunset Cruises", "Spa Treatments", "Marine Life"],
+    itinerary: [
+      { day: 1, title: "Arrival in Paradise", description: "Seaplane/speedboat transfer to resort, welcome drink, villa orientation, beach time." },
+      { day: 2, title: "Water Activities", description: "Snorkeling excursion, water sports, sunset dolphin cruise, romantic dinner on beach." },
+      { day: 3, title: "Island Exploration", description: "Visit local island, fishing trip, spa treatment, stargazing on beach." },
+      { day: 4, title: "Leisure & Departure", description: "Sunrise yoga, leisure morning, checkout, transfer to airport." },
+    ],
+    inclusions: ["Water Villa", "All Meals", "Seaplane Transfers", "Snorkeling", "Sunset Cruise"],
+    packages: [
+      { name: "Island Escape", duration: "4 Days / 3 Nights", features: ["Beach villa", "Half board", "Speedboat transfer"] },
+      { name: "Honeymoon Special", duration: "5 Days / 4 Nights", features: ["Water villa", "All inclusive", "Couple spa", "Romantic dinner"] },
+      { name: "Luxury Indulgence", duration: "6 Days / 5 Nights", features: ["Private pool villa", "Butler service", "Seaplane", "All experiences"] },
+    ],
+  },
+}
+
+// Default destination data for unlisted destinations
+const defaultDestination = {
+  name: "Destination",
+  tagline: "Explore with GoBuddy",
+  description: "Discover amazing experiences with our curated travel packages. Contact us for customized itineraries.",
+  heroImage: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+    "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80",
+    "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80",
+  ],
+  rating: 4.7,
+  duration: "Customizable",
+  bestTime: "Year Round",
+  highlights: ["Local Experiences", "Guided Tours", "Cultural Immersion", "Adventure Activities", "Scenic Beauty", "Local Cuisine"],
+  itinerary: [],
+  inclusions: ["Accommodation", "Transfers", "Sightseeing", "Tour Guide"],
+  packages: [],
+}
+
+export default function DestinationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = use(params)
+  const slug = resolvedParams.slug
+  const destination = destinationsData[slug] || { ...defaultDestination, name: slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ") }
+
+  return (
+    <main className="min-h-screen">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative h-[70vh] min-h-[500px]">
+        <Image
+          src={destination.heroImage}
+          alt={destination.name}
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-4 pb-16">
+            <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors">
+              <ChevronLeft className="h-5 w-5" />
+              Back to Home
+            </Link>
+            <div className="max-w-3xl">
+              <span className="inline-block px-4 py-2 bg-secondary text-white text-sm font-semibold rounded-full mb-4">
+                {destination.tagline}
+              </span>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{destination.name}</h1>
+              <p className="text-lg text-white/90 mb-6">{destination.description}</p>
+              
+              <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Star className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                  <span className="text-white font-semibold">{destination.rating}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Clock className="h-5 w-5 text-white" />
+                  <span className="text-white">{destination.duration}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Calendar className="h-5 w-5 text-white" />
+                  <span className="text-white">{destination.bestTime}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Info Bar */}
+      <section className="bg-primary py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-between items-center gap-4">
+            <div className="text-white">
+              <p className="text-2xl font-bold">Ready to explore {destination.name}?</p>
+              <span className="text-sm text-white/80">Get a customized quote for your trip</span>
+            </div>
+            <div className="flex gap-4">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 gap-2 rounded-full">
+                Enquire Now
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
+                Call Us
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Top Highlights</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {destination.highlights.map((highlight) => (
+              <div key={highlight} className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all">
+                <Camera className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-sm font-medium text-foreground">{highlight}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {destination.images.map((image, index) => (
+              <div key={index} className="relative h-64 rounded-xl overflow-hidden group">
+                <Image
+                  src={image}
+                  alt={`${destination.name} ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Itinerary */}
+      {destination.itinerary.length > 0 && (
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Sample Itinerary</h2>
+            <div className="space-y-4">
+              {destination.itinerary.map((day) => (
+                <div key={day.day} className="flex gap-4 p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all">
+                  <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-xl flex flex-col items-center justify-center text-white">
+                    <span className="text-xs">Day</span>
+                    <span className="text-2xl font-bold">{day.day}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-2">{day.title}</h3>
+                    <p className="text-muted-foreground">{day.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Packages */}
+      {destination.packages.length > 0 && (
+        <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Our Packages</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {destination.packages.map((pkg, index) => (
+                <div key={pkg.name} className={`bg-card rounded-2xl p-6 border-2 transition-all hover:shadow-xl ${index === 1 ? "border-primary shadow-lg scale-105" : "border-border"}`}>
+                  {index === 1 && (
+                    <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full mb-4">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-xl font-bold text-foreground mb-2">{pkg.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-6">{pkg.duration}</p>
+                  <ul className="space-y-2 mb-6">
+                    {pkg.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-sm text-foreground">
+                        <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center">
+                          <svg className="w-3 h-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className={`w-full rounded-full ${index === 1 ? "bg-primary hover:bg-primary/90 text-white" : "bg-secondary hover:bg-secondary/90 text-white"}`}>
+                    Enquire Now
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Inclusions */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">What&apos;s Included</h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {destination.inclusions.map((item) => {
+              const icons: Record<string, typeof Hotel> = {
+                "Accommodation": Hotel,
+                "Breakfast": Utensils,
+                "All Meals": Utensils,
+                "All Meals on Houseboat": Utensils,
+                "Airport Transfers": Plane,
+                "Transfers": Plane,
+                "Sightseeing": Camera,
+                "Tour Guide": Users,
+                "Boat Safari": Camera,
+                "City Tour": MapPin,
+                "Desert Safari": MapPin,
+                "Snorkeling": Camera,
+                "Sunset Cruise": Camera,
+                "4-star Hotel": Hotel,
+                "Daily Breakfast": Utensils,
+                "Water Villa": Hotel,
+                "Seaplane Transfers": Plane,
+              }
+              const Icon = icons[item] || Camera
+              return (
+                <div key={item} className="flex flex-col items-center gap-2 p-4 bg-card rounded-xl border border-border text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">{item}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Explore {destination.name}?
+          </h2>
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            Let us help you plan the perfect trip. Contact us for customized packages and best deals!
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 gap-2 rounded-full">
+              Get Free Quote
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
+              Call Now
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <FloatingButtons />
+    </main>
+  )
+}
