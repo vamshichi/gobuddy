@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, ChevronDown, Phone, MapPin } from "lucide-react"
+import { Menu, X, ChevronDown, Phone, MapPin, Plane } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -36,11 +36,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
-          : "bg-transparent py-4"
-      }`}
+          : "bg-black/40 py-4"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -59,18 +58,16 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
-              className={`font-medium transition-colors hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-white"
-              }`}
+              className={`font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                }`}
             >
               Home
             </Link>
 
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
+                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                  }`}
               >
                 Domestic <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -87,9 +84,8 @@ export function Header() {
 
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
+                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                  }`}
               >
                 International <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
@@ -106,18 +102,16 @@ export function Header() {
 
             <Link
               href="/about"
-              className={`font-medium transition-colors hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-white"
-              }`}
+              className={`font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                }`}
             >
               About Us
             </Link>
 
             <Link
               href="/contact"
-              className={`font-medium transition-colors hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-white"
-              }`}
+              className={`font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                }`}
             >
               Contact
             </Link>
@@ -125,15 +119,20 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="outline" size="sm" className="gap-2 bg-white/10 border-white/30 text-foreground hover:bg-primary hover:text-white">
-              <Phone className="h-4 w-4" />
-              <span>+91 9902800885</span>
-            </Button>
+            <Link
+              href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="sm" className="gap-2 bg-white/10 border-secondary/30 text-secondary hover:bg-primary hover:text-white">
+                <MapPin className="h-4 w-4" />
+              </Button>
+            </Link>
             <Link href='/contact'>
-            <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-white gap-2">
-              <MapPin className="h-4 w-4" />
-              Plan Your Trip
-            </Button>
+              <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-white gap-2">
+                <Plane className="h-4 w-4" />
+                Plan Your Trip
+              </Button>
             </Link>
           </div>
 
@@ -153,7 +152,7 @@ export function Header() {
               <Link href="/" className="font-medium text-foreground py-2">
                 Home
               </Link>
-              
+
               <div className="border-b pb-2">
                 <p className="font-semibold text-primary mb-2">Domestic Destinations</p>
                 <div className="grid grid-cols-2 gap-2">
@@ -193,8 +192,7 @@ export function Header() {
 
               <div className="flex flex-col gap-2 pt-2">
                 <Button variant="outline" className="w-full gap-2">
-                  <Phone className="h-4 w-4" />
-                  +91 9902800885
+                  <MapPin className="h-4 w-4" />
                 </Button>
                 <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
                   <MapPin className="h-4 w-4" />

@@ -12,7 +12,7 @@ export function FloatingButtons() {
     return () => clearTimeout(timer)
   }, [])
 
-  const whatsappNumber = "919876543210"
+  const whatsappNumber = "919902800885"
   const whatsappMessage = encodeURIComponent("Hi! I'm interested in booking a travel package with GoBuddy Holidays.")
 
   return (
@@ -49,7 +49,7 @@ export function FloatingButtons() {
 
             {/* Call Button */}
             <a
-              href="tel:+919876543210"
+              href="tel:+919902800885"
               className="group flex items-center gap-3"
             >
               <span className="bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">

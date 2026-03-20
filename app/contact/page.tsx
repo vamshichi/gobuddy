@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle } from "lucide-react"
+import Link from "next/link"
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 9902800885", href: "tel:+919876543210" },
@@ -201,16 +202,22 @@ export default function ContactPage() {
 
               {/* Map */}
               <div className="bg-card rounded-2xl overflow-hidden shadow-lg border border-border">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1697523456789!5m2!1sen!2sin"
-                  width="100%"
-                  height="250"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="GoBuddy Holidays Location"
-                />
+                <Link
+                  href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <iframe
+                    src="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001&output=embed"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="GoBuddy Holidays Location"
+                    className="pointer-events-none"
+                  />
+                </Link>
               </div>
             </div>
           </div>

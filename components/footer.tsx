@@ -62,7 +62,7 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/images/gb-logo.png"
+                src="/images/gb1-logo.png"
                 alt="GoBuddy Holidays"
                 width={180}
                 height={60}
