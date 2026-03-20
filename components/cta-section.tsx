@@ -51,19 +51,19 @@ export function CTASection() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Let GoBuddy Holidays craft your perfect travel experience. 
+              Let GoBuddy Holidays craft your perfect travel experience.
               Contact us today and turn your dream vacation into reality!
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 items-center">
               <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 gap-2 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
-              >
-                Book Now
-                <ArrowRight className="h-5 w-5" />
-              </Button>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 gap-2 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                >
+                  Book Now
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
               </Link>
               {/* <Button
                 size="lg"
