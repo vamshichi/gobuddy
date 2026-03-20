@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle } from "lucide-react"
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-  { icon: Mail, label: "Email", value: "info@gobuddyholidays.com", href: "mailto:info@gobuddyholidays.com" },
-  { icon: MapPin, label: "Address", value: "123 Travel Street, Tourism Hub, India - 400001", href: "#" },
+  { icon: Phone, label: "Phone", value: "+91 9902800885", href: "tel:+919876543210" },
+  { icon: Mail, label: "Email", value: "support@gobuddyholidays.com", href: "mailto:support@gobuddyholidays.com" },
+  { icon: MapPin, label: "Address", value: "35 Peddu street, Kondithope, George Town, Chennai -600001", href: "#" },
   { icon: Clock, label: "Working Hours", value: "Mon - Sat: 9:00 AM - 7:00 PM", href: "#" },
 ]
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9902800885"
                       />
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { Plane, Hotel, Users, Globe, Map, Headphones, Shield, Clock } from "lucide-react"
+import { Plane, Hotel, Users, Globe, Map, Headphones, Shield, Clock, Landmark, Heart } from "lucide-react"
 
 const services = [
   {
@@ -40,6 +40,18 @@ const services = [
     description: "Round-the-clock assistance for all your travel needs and queries",
     color: "bg-cyan-500",
   },
+  {
+  icon: Landmark,
+  title: "Pilgrimage Packages",
+  description: "Spiritual journeys to sacred destinations with comfortable travel and guided support",
+  color: "bg-orange-500",
+},
+{
+  icon: Heart,
+  title: "Honeymoon Packages",
+  description: "Romantic getaway packages designed for newlyweds in beautiful destinations",
+  color: "bg-rose-500",
+},
 ]
 
 const features = [

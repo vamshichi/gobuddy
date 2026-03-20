@@ -75,11 +75,11 @@ export function CTASection() {
             <div className="flex flex-wrap justify-center gap-6 text-white/90">
               <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="h-4 w-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 9902800885</span>
               </a>
-              <a href="mailto:info@gobuddyholidays.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="mailto:support@gobuddyholidays.com" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@gobuddyholidays.com</span>
+                <span>support@gobuddyholidays.com</span>
               </a>
             </div>
           </div>

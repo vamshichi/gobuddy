@@ -123,3 +123,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* runway animation */
+@keyframes runwayMove {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+.animate-runway {
+  animation: runwayMove 1s linear infinite;
+}
+
+/* plane takeoff animation */
+@keyframes planeTakeoff {
+  0% {
+    transform: translate(-250px, 0) rotate(0deg);
+  }
+
+  60% {
+    transform: translate(0px, 0) rotate(0deg);
+  }
+
+  80% {
+    transform: translate(150px, -40px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(350px, -200px) rotate(-25deg);
+  }
+}
+
+.plane {
+  position: absolute;
+  bottom: 90px;
+  animation: planeTakeoff 3s ease-in-out forwards;
+}
+

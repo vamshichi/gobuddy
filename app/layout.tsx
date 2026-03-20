@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Poppins, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import FlightLoader from "@/components/FlightLoader"
 import './globals.css'
 
 const poppins = Poppins({ 
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={`${poppins.variable} ${montserrat.variable} font-sans antialiased`}>
+         {/* <FlightLoader /> */}
         {children}
         <Analytics />
       </body>

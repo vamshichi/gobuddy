@@ -73,10 +73,10 @@ export function SpecialOffers() {
               Special <span className="text-secondary">Deals</span> for You
             </h2>
           </div>
-          <Button variant="outline" className="mt-4 md:mt-0 gap-2">
+          {/* <Button variant="outline" className="mt-4 md:mt-0 gap-2">
             View All Offers
             <ArrowRight className="h-4 w-4" />
-          </Button>
+          </Button> */}
         </div>
 
         {/* Offers Grid */}

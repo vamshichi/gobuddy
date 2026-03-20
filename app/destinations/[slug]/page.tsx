@@ -218,7 +218,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
                 Enquire Now
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
+              <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-primary rounded-full">
                 Call Us
               </Button>
             </div>
@@ -373,7 +373,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
               Get Free Quote
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
+            <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white hover:text-primary rounded-full">
               Call Now
             </Button>
           </div>

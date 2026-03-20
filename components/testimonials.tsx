@@ -138,14 +138,14 @@ export function Testimonials() {
 
                   {/* Author */}
                   <div className="flex flex-col items-center">
-                    <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-primary/20 mb-4">
+                    {/* <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-primary/20 mb-4">
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
                         fill
                         className="object-cover"
                       />
-                    </div>
+                    </div> */}
                     <h4 className="font-bold text-foreground text-lg">{testimonial.name}</h4>
                     <p className="text-muted-foreground text-sm">{testimonial.location}</p>
                     <span className="inline-block mt-2 px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
@@ -204,14 +204,14 @@ export function Testimonials() {
               }`}
             >
               <div className="flex items-center gap-3">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                {/* <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </div> */}
                 <div className="text-left">
                   <p className={`font-semibold text-sm truncate ${index === currentIndex ? "text-white" : "text-foreground"}`}>
                     {testimonial.name}

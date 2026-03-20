@@ -77,19 +77,19 @@ export function Footer() {
                 <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span>+91 98765 43210</span>
+                <span>+91 9902800885</span>
               </a>
-              <a href="mailto:info@gobuddyholidays.com" className="flex items-center gap-3 text-background/80 hover:text-secondary transition-colors">
-                <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center">
+              <a href="mailto:support@gobuddyholidays.com" className="flex items-center gap-3 text-background/80 hover:text-secondary transition-colors">
+                <div className="w-10 h-10  flex items-center justify-center">
                   <Mail className="h-4 w-4" />
                 </div>
-                <span>info@gobuddyholidays.com</span>
+                <span>support@gobuddyholidays.com</span>
               </a>
               <div className="flex items-start gap-3 text-background/80">
                 <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="h-4 w-4" />
                 </div>
-                <span>123 Travel Street, Tourism Hub, India - 400001</span>
+                <span>35 Peddu street, Kondithope, George Town, Chennai -600001</span>
               </div>
             </div>
           </div>

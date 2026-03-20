@@ -30,7 +30,7 @@ export function EnquirePopup() {
 
   const timer = setTimeout(() => {
     setIsOpen(true)
-  }, 12000)
+  }, 40000)
 
   return () => clearTimeout(timer)
 }, [])

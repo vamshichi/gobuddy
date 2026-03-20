@@ -127,12 +127,14 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="outline" size="sm" className="gap-2 bg-white/10 border-white/30 text-foreground hover:bg-primary hover:text-white">
               <Phone className="h-4 w-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 9902800885</span>
             </Button>
+            <Link href='/contact'>
             <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-white gap-2">
               <MapPin className="h-4 w-4" />
               Plan Your Trip
             </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -192,7 +194,7 @@ export function Header() {
               <div className="flex flex-col gap-2 pt-2">
                 <Button variant="outline" className="w-full gap-2">
                   <Phone className="h-4 w-4" />
-                  +91 98765 43210
+                  +91 9902800885
                 </Button>
                 <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
                   <MapPin className="h-4 w-4" />

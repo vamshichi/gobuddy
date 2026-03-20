@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Search, MapPin, Calendar, Users, ChevronRight, Play } from "lucide-react"
+import Link from "next/link"
 
 const heroSlides = [
   {
@@ -90,21 +91,23 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
+            <Link href="/destinations">
             <Button
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-white gap-2 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
-              Explore Packages
+              Explore Destinations
               <ChevronRight className="h-5 w-5" />
             </Button>
-            <Button
+            </Link>
+            {/* <Button
               size="lg"
               variant="outline"
               className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-foreground gap-2 text-lg px-8 py-6 rounded-full"
             >
               <Play className="h-5 w-5" />
               Watch Video
-            </Button>
+            </Button> */}
           </div>
 
           {/* Slide Indicators */}
