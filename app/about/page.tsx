@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
 import { Button } from "@/components/ui/button"
 import { Check, Users, Globe, Award, Heart, Target, Zap, Shield, ArrowRight, Play } from "lucide-react"
+import Link from "next/link"
 
 const stats = [
   { value: "10+", label: "Years Experience" },
@@ -123,10 +124,10 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              <Button className="bg-secondary hover:bg-secondary/90 text-white gap-2 rounded-full">
+              {/* <Button className="bg-secondary hover:bg-secondary/90 text-white gap-2 rounded-full">
                 <Play className="h-4 w-4" />
                 Watch Our Story
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -183,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      {/* <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Team</span>
@@ -205,7 +206,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-20 bg-primary">
@@ -217,13 +218,15 @@ export default function AboutPage() {
             Let us help you create unforgettable travel experiences. Contact us today!
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 gap-2 rounded-full">
               Plan Your Trip
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-full">
+            </Link>
+            {/* <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white hover:text-primary rounded-full">
               Contact Us
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
