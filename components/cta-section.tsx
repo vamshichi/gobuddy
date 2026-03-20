@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function CTASection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -55,6 +56,7 @@ export function CTASection() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-white text-primary hover:bg-white/90 gap-2 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
@@ -62,13 +64,14 @@ export function CTASection() {
                 Book Now
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button
+              </Link>
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white hover:text-primary gap-2 rounded-full px-8 font-semibold"
               >
                 Get Free Quote
-              </Button>
+              </Button> */}
             </div>
 
             {/* Contact Info */}

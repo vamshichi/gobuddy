@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Check, ArrowRight, Award, Heart, Zap, Target } from "lucide-react"
 
 const reasons = [
@@ -130,11 +131,12 @@ export function AboutSection() {
                 </div>
               ))}
             </div>
-
+            <Link href="/about">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white gap-2 rounded-full">
               Learn More About Us
               <ArrowRight className="h-5 w-5" />
             </Button>
+            </Link>
           </div>
         </div>
 
