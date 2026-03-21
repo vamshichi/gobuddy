@@ -46,26 +46,49 @@ export function EnquirePopup() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    // Validate captcha
-    if (parseInt(captchaAnswer) !== captcha.num1 + captcha.num2) {
-      setSubmitMessage("Incorrect captcha answer. Please try again.")
-      return
-    }
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
 
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitMessage("Thank you! We will contact you soon.")
-      setTimeout(() => {
-        setIsOpen(false)
-      }, 2000)
-    }, 1500)
+  if (parseInt(captchaAnswer) !== captcha.num1 + captcha.num2) {
+    setSubmitMessage("Incorrect captcha answer. Please try again.")
+    return
   }
+
+  setIsSubmitting(true)
+
+  try {
+    const res = await fetch("/api/enquiry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+
+    const data = await res.json()
+
+    if (data.success) {
+      setSubmitMessage("Thank you! We will contact you soon.")
+      setFormData({
+        name: "",
+        city: "",
+        email: "",
+        phone: "",
+        whatsapp: "",
+        destination: "",
+        dateOfTravel: "",
+        numberOfPeople: "",
+        vacationType: "",
+      })
+    } else {
+      setSubmitMessage("Something went wrong.")
+    }
+  } catch (error) {
+    setSubmitMessage("Failed to send enquiry.")
+  }
+
+  setIsSubmitting(false)
+}
 
   if (!isOpen) return null
 

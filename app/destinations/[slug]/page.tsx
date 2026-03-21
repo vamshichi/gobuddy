@@ -51,35 +51,35 @@ const destinationsData: Record<string, {
     ],
   },
 
-  kerala: {
-    name: "Kerala",
-    tagline: "God's Own Country",
-    description:
-      "Discover the enchanting backwaters, lush hill stations, and rich cultural heritage of Kerala. A land of serene beauty and warm hospitality.",
-    heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=800&q=80",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
-      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&q=80",
-    ],
-    rating: 4.9,
-    duration: "4-6 Days",
-    bestTime: "September - March",
-    highlights: ["Alleppey Backwaters", "Munnar Tea Gardens", "Kochi Fort", "Periyar Wildlife", "Kovalam Beach", "Kathakali Show"],
-    itinerary: [
-      { day: 1, title: "Kochi Arrival", description: "Arrive at Cochin airport, explore Fort Kochi, Chinese fishing nets, evening Kathakali show." },
-      { day: 2, title: "Munnar Hills", description: "Drive to Munnar, visit tea plantations, Eravikulam National Park, local sightseeing." },
-      { day: 3, title: "Thekkady Wildlife", description: "Travel to Thekkady, Periyar boat safari, spice garden visit, tribal performance." },
-      { day: 4, title: "Alleppey Houseboat", description: "Board luxury houseboat, cruise through backwaters, overnight stay on boat." },
-      { day: 5, title: "Kovalam & Departure", description: "Disembark, drive to Kovalam beach, leisure time, departure from Trivandrum." },
-    ],
-    inclusions: ["Accommodation", "All Meals on Houseboat", "Transfers", "Sightseeing", "Boat Safari"],
-    packages: [
-      { name: "Backwater Bliss", duration: "4 Days / 3 Nights", features: ["Houseboat stay", "Kochi tour", "Transfers included"] },
-      { name: "Complete Kerala", duration: "5 Days / 4 Nights", features: ["Hill station + Backwaters", "All meals", "Private transfers"] },
-      { name: "Royal Kerala", duration: "7 Days / 6 Nights", features: ["Premium resorts", "Ayurveda spa", "Complete tour", "Flight tickets"] },
-    ],
-  },
+  // kerala: {
+  //   name: "Kerala",
+  //   tagline: "God's Own Country",
+  //   description:
+  //     "Discover the enchanting backwaters, lush hill stations, and rich cultural heritage of Kerala. A land of serene beauty and warm hospitality.",
+  //   heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=800&q=80",
+  //     "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
+  //     "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&q=80",
+  //   ],
+  //   rating: 4.9,
+  //   duration: "4-6 Days",
+  //   bestTime: "September - March",
+  //   highlights: ["Alleppey Backwaters", "Munnar Tea Gardens", "Kochi Fort", "Periyar Wildlife", "Kovalam Beach", "Kathakali Show"],
+  //   itinerary: [
+  //     { day: 1, title: "Kochi Arrival", description: "Arrive at Cochin airport, explore Fort Kochi, Chinese fishing nets, evening Kathakali show." },
+  //     { day: 2, title: "Munnar Hills", description: "Drive to Munnar, visit tea plantations, Eravikulam National Park, local sightseeing." },
+  //     { day: 3, title: "Thekkady Wildlife", description: "Travel to Thekkady, Periyar boat safari, spice garden visit, tribal performance." },
+  //     { day: 4, title: "Alleppey Houseboat", description: "Board luxury houseboat, cruise through backwaters, overnight stay on boat." },
+  //     { day: 5, title: "Kovalam & Departure", description: "Disembark, drive to Kovalam beach, leisure time, departure from Trivandrum." },
+  //   ],
+  //   inclusions: ["Accommodation", "All Meals on Houseboat", "Transfers", "Sightseeing", "Boat Safari"],
+  //   packages: [
+  //     { name: "Backwater Bliss", duration: "4 Days / 3 Nights", features: ["Houseboat stay", "Kochi tour", "Transfers included"] },
+  //     { name: "Complete Kerala", duration: "5 Days / 4 Nights", features: ["Hill station + Backwaters", "All meals", "Private transfers"] },
+  //     { name: "Royal Kerala", duration: "7 Days / 6 Nights", features: ["Premium resorts", "Ayurveda spa", "Complete tour", "Flight tickets"] },
+  //   ],
+  // },
 
   himachal_pradesh: {
     name: "Himachal Pradesh",
@@ -112,34 +112,34 @@ const destinationsData: Record<string, {
     ],
   },
 
-  coorg: {
-    name: "Coorg",
-    tagline: "Scotland of India",
-    description:
-      "Coorg, the coffee capital of India, enchants visitors with its misty mountains, sprawling coffee and spice estates, dense forests, and the warm Kodava hospitality. A refreshing escape into nature.",
-    heroImage: "https://images.unsplash.com/photo-1576677849151-5b0c46e0afd7?w=1920&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1615813967515-e1838c1c5116?w=800&q=80",
-      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
-      "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=800&q=80",
-    ],
-    rating: 4.7,
-    duration: "3-4 Days",
-    bestTime: "October - March",
-    highlights: ["Abbey Falls", "Raja's Seat", "Dubare Elephant Camp", "Coffee Plantations", "Talacauvery", "Namdroling Monastery"],
-    itinerary: [
-      { day: 1, title: "Arrival in Madikeri", description: "Arrive Coorg, check-in at plantation stay, visit Raja's Seat for sunset, local cuisine dinner." },
-      { day: 2, title: "Plantation & Wildlife", description: "Morning coffee plantation walk, Dubare Elephant Camp, river rafting on Cauvery, Abbey Falls." },
-      { day: 3, title: "Temples & Culture", description: "Talacauvery source of Cauvery, Bhagamandala temple, Namdroling Golden Temple, local market." },
-      { day: 4, title: "Leisure & Departure", description: "Morning nature walk, buy fresh coffee & spices, depart with sweet memories." },
-    ],
-    inclusions: ["Plantation Stay", "All Meals", "Sightseeing Transfers", "Elephant Safari", "Coffee Tour"],
-    packages: [
-      { name: "Coffee Trail", duration: "3 Days / 2 Nights", features: ["Plantation stay", "Breakfast & dinner", "Transfers included"] },
-      { name: "Nature Escape", duration: "4 Days / 3 Nights", features: ["Luxury resort", "All meals", "Elephant camp", "River rafting"] },
-      { name: "Coorg Complete", duration: "5 Days / 4 Nights", features: ["Premium villa", "All inclusive", "Spa", "All sightseeing"] },
-    ],
-  },
+  // coorg: {
+  //   name: "Coorg",
+  //   tagline: "Scotland of India",
+  //   description:
+  //     "Coorg, the coffee capital of India, enchants visitors with its misty mountains, sprawling coffee and spice estates, dense forests, and the warm Kodava hospitality. A refreshing escape into nature.",
+  //   heroImage: "https://images.unsplash.com/photo-1576677849151-5b0c46e0afd7?w=1920&q=80",
+  //   images: [
+  //     "https://images.unsplash.com/photo-1615813967515-e1838c1c5116?w=800&q=80",
+  //     "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
+  //     "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=800&q=80",
+  //   ],
+  //   rating: 4.7,
+  //   duration: "3-4 Days",
+  //   bestTime: "October - March",
+  //   highlights: ["Abbey Falls", "Raja's Seat", "Dubare Elephant Camp", "Coffee Plantations", "Talacauvery", "Namdroling Monastery"],
+  //   itinerary: [
+  //     { day: 1, title: "Arrival in Madikeri", description: "Arrive Coorg, check-in at plantation stay, visit Raja's Seat for sunset, local cuisine dinner." },
+  //     { day: 2, title: "Plantation & Wildlife", description: "Morning coffee plantation walk, Dubare Elephant Camp, river rafting on Cauvery, Abbey Falls." },
+  //     { day: 3, title: "Temples & Culture", description: "Talacauvery source of Cauvery, Bhagamandala temple, Namdroling Golden Temple, local market." },
+  //     { day: 4, title: "Leisure & Departure", description: "Morning nature walk, buy fresh coffee & spices, depart with sweet memories." },
+  //   ],
+  //   inclusions: ["Plantation Stay", "All Meals", "Sightseeing Transfers", "Elephant Safari", "Coffee Tour"],
+  //   packages: [
+  //     { name: "Coffee Trail", duration: "3 Days / 2 Nights", features: ["Plantation stay", "Breakfast & dinner", "Transfers included"] },
+  //     { name: "Nature Escape", duration: "4 Days / 3 Nights", features: ["Luxury resort", "All meals", "Elephant camp", "River rafting"] },
+  //     { name: "Coorg Complete", duration: "5 Days / 4 Nights", features: ["Premium villa", "All inclusive", "Spa", "All sightseeing"] },
+  //   ],
+  // },
 
   andaman_nicobar: {
     name: "Andaman & Nicobar",
@@ -598,6 +598,549 @@ const destinationsData: Record<string, {
     ],
   },
 
+  spain: {
+  name: "Spain",
+  tagline: "Passion. Culture. Life.",
+  description:
+    "Spain is a feast for the senses — golden-hour tapas bars in Seville, Gaudí's surreal Barcelona skyline, snow-dusted Sierra Nevada peaks, flamenco echoing through Granada's Albaicín, and endless sun-drenched coastlines where wine flows as freely as conversation.",
+  heroImage: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80",
+    // "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80",
+    "https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=800&q=80",
+  ],
+  rating: 4.8,
+  duration: "7-10 Days",
+  bestTime: "April - June, September - October",
+  highlights: [
+    "Sagrada Família",
+    "Alhambra Palace",
+    "Madrid's Prado Museum",
+    "Seville's Plaza de España",
+    "San Sebastián Pintxos",
+    "Flamenco in Granada",
+  ],
+  itinerary: [
+    { day: 1, title: "Madrid Arrival", description: "Land in Madrid, Plaza Mayor, Puerta del Sol, rooftop dinner with views of the Gran Vía." },
+    { day: 2, title: "Madrid Masterpieces", description: "Prado Museum, Retiro Park, Reina Sofía (Guernica), tapas in La Latina neighbourhood." },
+    { day: 3, title: "Toledo Day Trip", description: "UNESCO-listed Toledo — El Greco's city, medieval cathedral, Jewish quarter, Alcázar fortress." },
+    { day: 4, title: "Granada", description: "Train to Granada, Alhambra Palace & Generalife gardens, Albaicín sunset, live flamenco show." },
+    { day: 5, title: "Seville", description: "Bus to Seville, Real Alcázar, Giralda tower, Plaza de España, evening tapas crawl." },
+    { day: 6, title: "Barcelona Arrival", description: "Fly to Barcelona, La Rambla, Gothic Quarter, Barceloneta beach, dinner at the port." },
+    { day: 7, title: "Gaudí & Modernisme", description: "Sagrada Família, Park Güell, Casa Batlló, Passeig de Gràcia shopping, El Born cocktail bars." },
+    { day: 8, title: "Departure", description: "Morning market at La Boqueria, last vermouth at a bodega, fly home." },
+  ],
+  inclusions: ["4-5 Star Hotels", "Breakfast Daily", "High-Speed Rail Passes", "Alhambra Entry", "City Tours", "Airport Transfers"],
+  packages: [
+    { name: "España Starter", duration: "7 Days / 6 Nights", features: ["4-star hotels", "Breakfast", "Madrid + Barcelona", "Prado & Sagrada Família"] },
+    { name: "Classic Spain", duration: "9 Days / 8 Nights", features: ["4-5 star hotels", "Breakfast + Dinners", "Madrid + Granada + Seville + Barcelona", "Flamenco show"] },
+    { name: "Luxury Iberia", duration: "12 Days / 11 Nights", features: ["5-star Paradores", "All inclusive", "5 cities + San Sebastián", "Private guide", "Wine experiences"] },
+  ],
+},
+
+europe: {
+  name: "Europe",
+  tagline: "A Continent of Wonders",
+  description:
+    "Europe is the world's greatest open-air museum — cobblestone Paris at dawn, the Northern Lights over Norway's fjords, the canals of Venice at golden hour, Prague's fairy-tale spires, and the Amalfi cliffs tumbling into turquoise sea. Every corner rewrites your idea of beauty.",
+  heroImage: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80",
+    // "https://images.unsplash.com/photo-1558383409-ab7ef8db3330?w=800&q=80",
+    "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80",
+  ],
+  rating: 4.9,
+  duration: "12-15 Days",
+  bestTime: "May - September",
+  highlights: [
+    "Eiffel Tower, Paris",
+    "Colosseum, Rome",
+    "Swiss Alps",
+    "Amsterdam Canals",
+    "Prague Old Town",
+    "Santorini Caldera",
+  ],
+  itinerary: [
+    { day: 1, title: "Paris – City of Light", description: "Arrive Paris, Eiffel Tower, Seine cruise, Montmartre at sunset, bistro dinner." },
+    { day: 2, title: "Paris Highlights", description: "Louvre Museum, Champs-Élysées, Arc de Triomphe, Le Marais, evening at Sacré-Cœur." },
+    { day: 3, title: "Amsterdam", description: "Eurostar to Amsterdam, canal boat, Anne Frank House, Rijksmuseum, Jordaan neighbourhood." },
+    { day: 4, title: "Swiss Alps", description: "Fly to Zurich, train to Interlaken, Jungfraujoch 'Top of Europe', mountain fondue dinner." },
+    { day: 5, title: "Prague", description: "Fly to Prague, Charles Bridge, Old Town Square & Astronomical Clock, Prague Castle at dusk." },
+    { day: 6, title: "Vienna", description: "Train to Vienna, Schönbrunn Palace, Ringstrasse, Wiener Schnitzel, Mozart concert." },
+    { day: 7, title: "Rome", description: "Fly to Rome, Colosseum, Roman Forum, Trevi Fountain, Vatican Museums, Sistine Chapel." },
+    { day: 8, title: "Amalfi Coast", description: "Train to Naples, drive to Amalfi Coast, Positano cliffside views, limoncello tasting, sunset dinner." },
+    { day: 9, title: "Departure", description: "Return to Rome or Naples, final espresso, fly home." },
+  ],
+  inclusions: ["4-5 Star Hotels", "Daily Breakfast", "Rail & Air Passes", "Key Museum Entries", "Guided Tours", "All Transfers"],
+  packages: [
+    { name: "Europe Sampler", duration: "10 Days / 9 Nights", features: ["4-star hotels", "Breakfast", "Paris + Rome + Amsterdam", "City highlights"] },
+    { name: "Grand Europa", duration: "14 Days / 13 Nights", features: ["4-5 star hotels", "Breakfast + Select Dinners", "6 countries", "Rail passes", "Guided tours"] },
+    { name: "Ultimate Europe", duration: "18 Days / 17 Nights", features: ["Luxury hotels", "All inclusive", "8 countries", "Private guide", "Swiss Alps + Greece"] },
+  ],
+},
+
+italy: {
+  name: "Italy",
+  tagline: "La Dolce Vita",
+  description:
+    "Italy is where art, history and food converge into something almost unreasonably beautiful — Vatican frescoes, Venetian canals, Tuscan vine-draped hillsides, the drama of the Amalfi Coast, and a culinary culture so rich it has its own philosophy of living well.",
+  heroImage: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&q=80",
+    // "https://images.unsplash.com/photo-1541370976299-4d24be63de42?w=800&q=80",
+    "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80",
+  ],
+  rating: 4.9,
+  duration: "8-10 Days",
+  bestTime: "April - June, September - October",
+  highlights: [
+    "Colosseum & Roman Forum",
+    "Vatican & Sistine Chapel",
+    "Venice Grand Canal",
+    "Florence Uffizi Gallery",
+    "Cinque Terre Coastline",
+    "Amalfi Drive",
+  ],
+  itinerary: [
+    { day: 1, title: "Rome Arrival", description: "Land in Rome, check in near the historic centre, Trevi Fountain, Piazza Navona, first gelato." },
+    { day: 2, title: "Ancient Rome", description: "Colosseum, Palatine Hill, Roman Forum, Capitoline Museums, aperitivo in Trastevere." },
+    { day: 3, title: "Vatican Day", description: "Vatican Museums, Sistine Chapel, St Peter's Basilica & dome climb, lunch in Prati." },
+    { day: 4, title: "Florence", description: "High-speed train to Florence, Duomo climb, Uffizi Gallery, Ponte Vecchio, Oltrarno dinner." },
+    { day: 5, title: "Tuscany", description: "Day trip to Siena, Chianti vineyards wine tasting, San Gimignano towers, truffle pasta lunch." },
+    { day: 6, title: "Venice", description: "Train to Venice, Grand Canal vaporetto, St Mark's Basilica, Doge's Palace, Rialto market." },
+    { day: 7, title: "Cinque Terre", description: "Train to Cinque Terre, hike between Monterosso and Vernazza, fresh seafood, pesto pasta." },
+    { day: 8, title: "Amalfi Coast", description: "Drive to Positano, Amalfi town, Ravello gardens, limoncello, sunset over the Tyrrhenian Sea." },
+    { day: 9, title: "Return & Departure", description: "Return to Naples or Rome, final espresso and cornetto, fly home." },
+  ],
+  inclusions: ["4-5 Star Hotels", "Daily Breakfast", "High-Speed Rail", "Museum Entries", "Wine Tasting", "All Transfers"],
+  packages: [
+    { name: "Italy Essentials", duration: "7 Days / 6 Nights", features: ["4-star hotels", "Breakfast", "Rome + Florence + Venice", "Colosseum + Vatican"] },
+    { name: "Bella Italia", duration: "10 Days / 9 Nights", features: ["4-5 star hotels", "Breakfast + 3 Dinners", "5 destinations + Cinque Terre", "Wine & food tour"] },
+    { name: "Luxe Italia", duration: "13 Days / 12 Nights", features: ["5-star boutique hotels", "All inclusive", "6 regions", "Private guide", "Truffle & cooking class"] },
+  ],
+},
+
+"sri-lanka": {
+  name: "Sri Lanka",
+  tagline: "The Pearl of the Indian Ocean",
+  description:
+    "Sri Lanka packs an extraordinary world into one teardrop island — ancient rock fortresses rising from the jungle, emerald tea plantations cascading across misty hills, leopards in Yala, blue whales off Mirissa, and beaches so pristine they look painted. A destination that never stops surprising.",
+  heroImage: "https://images.unsplash.com/photo-1580181921170-8d1025fe2e55?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1586016413664-864c0dd76f53?w=800&q=80",
+    "https://images.unsplash.com/photo-1546975490-a79e7b39de84?w=800&q=80",
+    "https://images.unsplash.com/photo-1607940580562-29d69c7e3b6b?w=800&q=80",
+  ],
+  rating: 4.7,
+  duration: "8-12 Days",
+  bestTime: "December - March (West), May - September (East)",
+  highlights: [
+    "Sigiriya Lion Rock",
+    "Yala Safari",
+    "Ella Tea Country",
+    "Galle Fort",
+    "Nine Arch Bridge",
+    "Mirissa Whale Watching",
+  ],
+  itinerary: [
+    { day: 1, title: "Colombo Arrival", description: "Land in Colombo, Pettah market, Independence Square, rooftop dinner in the Fort district." },
+    { day: 2, title: "Cultural Triangle", description: "Drive to Sigiriya, climb the iconic Lion Rock fortress, Dambulla Cave Temple frescoes." },
+    { day: 3, title: "Ancient Kingdoms", description: "Polonnaruwa ancient ruins, Anuradhapura sacred bodhi tree, elephant sightings en route." },
+    { day: 4, title: "Kandy", description: "Drive to Kandy, Temple of the Tooth Relic, Royal Botanical Gardens, Kandy cultural dance show." },
+    { day: 5, title: "Tea Country – Ella", description: "Scenic train through misty tea estates to Ella, Nine Arch Bridge, Little Adam's Peak hike." },
+    { day: 6, title: "Yala Safari", description: "Drive to Yala National Park, morning & evening jeep safari — leopards, elephants, crocodiles." },
+    { day: 7, title: "Galle & the South", description: "Explore Galle Fort's Dutch colonial streets, surf at Weligama, sea turtle nesting beach." },
+    { day: 8, title: "Mirissa Beach", description: "Whale watching boat at sunrise, Mirissa beach afternoon, fresh seafood dinner at sunset." },
+    { day: 9, title: "Colombo & Departure", description: "Return to Colombo, last spice and gem shopping, fly home." },
+  ],
+  inclusions: ["Boutique Hotels & Eco Lodges", "Breakfast Daily", "Safari Jeep", "Scenic Train Tickets", "Whale Watching", "All Transfers"],
+  packages: [
+    { name: "Sri Lanka Intro", duration: "8 Days / 7 Nights", features: ["3-4 star hotels", "Breakfast", "Sigiriya + Kandy + Ella", "Cultural Triangle"] },
+    { name: "Pearl of Asia", duration: "11 Days / 10 Nights", features: ["4-star boutique hotels", "Breakfast + Dinners", "North to South", "Yala Safari + Mirissa"] },
+    { name: "Island Complete", duration: "14 Days / 13 Nights", features: ["Luxury eco lodges", "All inclusive", "Full island circuit", "Private guide", "Whale watching"] },
+  ],
+},
+
+"south-africa": {
+  name: "South Africa",
+  tagline: "A World in One Country",
+  description:
+    "South Africa is the planet in miniature — Big Five safaris in the Kruger, penguins on Cape Town's beaches, wine estates in the Stellenbosch valleys, the dramatic Garden Route cliffs, and the thundering grandeur of the Drakensberg. Nowhere else rewards adventurers so generously.",
+  heroImage: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80",
+    "https://images.unsplash.com/photo-1534236732376-a5c31671eb9d?w=800&q=80",
+    "https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=800&q=80",
+  ],
+  rating: 4.8,
+  duration: "10-14 Days",
+  bestTime: "May - September (Safari), October - April (Cape Town)",
+  highlights: [
+    "Kruger National Park",
+    "Table Mountain",
+    "Boulders Beach Penguins",
+    "Cape Winelands",
+    "Garden Route",
+    "Robben Island",
+  ],
+  itinerary: [
+    { day: 1, title: "Johannesburg Arrival", description: "Land in Jo'burg, Apartheid Museum, Soweto township tour, dinner in Maboneng Precinct." },
+    { day: 2, title: "Kruger Safari – Day 1", description: "Fly to Kruger Mpumalanga, check into safari lodge, afternoon game drive — lion, elephant, buffalo." },
+    { day: 3, title: "Kruger Safari – Day 2", description: "Dawn game drive (best for leopard), guided bush walk, Big Five check, sundowner drinks." },
+    { day: 4, title: "Panorama Route", description: "Blyde River Canyon (3rd largest in the world), God's Window viewpoint, Bourke's Luck Potholes." },
+    { day: 5, title: "Cape Town", description: "Fly to Cape Town, Waterfront, Bo-Kaap colourful streets, sunset cable car up Table Mountain." },
+    { day: 6, title: "Cape Peninsula", description: "Cape of Good Hope, Boulders Beach African penguins, Chapman's Peak coastal drive, Kalk Bay." },
+    { day: 7, title: "Cape Winelands", description: "Stellenbosch & Franschhoek wine estates, gourmet lunch, mountain vineyard tasting, cellar tour." },
+    { day: 8, title: "Garden Route", description: "Drive the Garden Route — Knysna Lagoon, Tsitsikamma forest, bungee at Bloukrans Bridge." },
+    { day: 9, title: "Robben Island & Farewell", description: "Ferry to Robben Island, Nelson Mandela's cell, farewell braai dinner in Cape Town." },
+    { day: 10, title: "Departure", description: "Morning at the V&A Waterfront, craft shopping, fly home." },
+  ],
+  inclusions: ["4-5 Star Hotels & Safari Lodge", "All Meals on Safari", "Game Drives", "Domestic Flights", "Guided Tours", "All Transfers"],
+  packages: [
+    { name: "South Africa Intro", duration: "10 Days / 9 Nights", features: ["4-star hotels", "Breakfast", "Kruger + Cape Town", "Game drives"] },
+    { name: "Rainbow Nation", duration: "13 Days / 12 Nights", features: ["4-5 star + safari lodge", "Breakfast + Safari meals", "Kruger + Panorama + Cape Town + Garden Route", "Big Five safari"] },
+    { name: "Ultimate Africa", duration: "16 Days / 15 Nights", features: ["Luxury lodges & hotels", "All inclusive", "Full country circuit", "Private safari guide", "Whale watching + winelands"] },
+  ],
+},
+
+shimla: {
+  name: "Shimla",
+  tagline: "Queen of Hills",
+  description:
+    "Shimla is a colonial-era hill station frozen in elegant time — Victorian Gothic architecture lining the famous Mall Road, toy train rides through cedar forests, snow-dusted ridges in winter, and the unhurried charm of a Himalayan town that once served as the summer capital of British India.",
+  heroImage: "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=800&q=80",
+    // "https://images.unsplash.com/photo-1580289565-19a87c66a21c?w=800&q=80",
+    // "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=1920&q=80"
+  ],
+  rating: 4.6,
+  duration: "4-6 Days",
+  bestTime: "October - June",
+  highlights: ["Mall Road", "Jakhu Temple", "Toy Train (Kalka–Shimla)", "Kufri Snow Point", "Christ Church", "Chadwick Falls"],
+  itinerary: [
+    { day: 1, title: "Shimla Arrival", description: "Arrive Shimla, stroll Mall Road, Scandal Point, Ridge Maidan, sunset at Christ Church." },
+    { day: 2, title: "Jakhu & Old Town", description: "Jakhu Temple trek, Hanuman statue, Lakkar Bazaar for wooden crafts, Viceregal Lodge tour." },
+    { day: 3, title: "Kufri Day Trip", description: "Kufri snow point, yak rides, Himalayan Nature Park, apple orchards, back for evening at Mall Road." },
+    { day: 4, title: "Toy Train & Departure", description: "Heritage Kalka–Shimla toy train ride through 103 tunnels and 864 bridges, depart for plains." },
+  ],
+  inclusions: ["Hotel Stay", "Breakfast", "Toy Train Ticket", "Kufri Day Trip", "City Tour", "Transfers"],
+  packages: [
+    { name: "Shimla Weekend", duration: "3 Days / 2 Nights", features: ["3-star hotel", "Breakfast", "Mall Road + Jakhu", "City tour"] },
+    { name: "Shimla Classic", duration: "5 Days / 4 Nights", features: ["4-star hotel", "Breakfast + Dinners", "Kufri + Toy Train", "All sightseeing"] },
+    { name: "Shimla Luxury", duration: "7 Days / 6 Nights", features: ["Heritage hotel", "All inclusive", "Chail + Narkanda", "Private guide"] },
+  ],
+},
+
+manali: {
+  name: "Manali",
+  tagline: "Valley of the Gods",
+  description:
+    "Manali is adventure and serenity poured into one Himalayan valley — roaring Beas River, snow-capped Rohtang Pass, ancient Hadimba Temple hidden in deodar forests, the buzz of Kasol backpacker cafes, and winter ski slopes that draw thrill-seekers from across India.",
+  heroImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?w=1200&q=80",
+    "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80",
+  ],
+  rating: 4.7,
+  duration: "5-7 Days",
+  bestTime: "October - June (Snow), July - September (Adventure)",
+  highlights: ["Rohtang Pass", "Hadimba Temple", "Solang Valley", "Old Manali", "Beas River Rafting", "Spiti Valley Gateway"],
+  itinerary: [
+    { day: 1, title: "Manali Arrival", description: "Arrive Manali, settle in, Manu Temple, Old Manali lanes, Beas riverside café evening." },
+    { day: 2, title: "Hadimba & Solang", description: "Hadimba Devi Temple in deodar grove, Solang Valley for snow activities, paragliding or zorbing." },
+    { day: 3, title: "Rohtang Pass", description: "Early morning drive to Rohtang Pass (3,978m), snow play, panoramic Himalayan views, Atal Tunnel." },
+    { day: 4, title: "Kullu & Rafting", description: "Beas River white-water rafting in Kullu, Naggar Castle, Roerich Art Gallery, local market." },
+    { day: 5, title: "Manikaran Hot Springs", description: "Parvati Valley drive, Manikaran Sahib Gurudwara, natural hot springs, Kasol hippie café crawl." },
+    { day: 6, title: "Departure", description: "Morning at leisure, local shopping for Kullu shawls and dry fruits, depart for Chandigarh/Delhi." },
+  ],
+  inclusions: ["Hotel / Cottage Stay", "Breakfast", "Rohtang Permit", "Rafting", "Solang Snow Activities", "Transfers"],
+  packages: [
+    { name: "Manali Escape", duration: "4 Days / 3 Nights", features: ["3-star hotel", "Breakfast", "Rohtang + Solang", "City sightseeing"] },
+    { name: "Adventure Manali", duration: "6 Days / 5 Nights", features: ["4-star resort", "Breakfast + Dinners", "Rafting + Paragliding + Rohtang", "Parvati Valley"] },
+    { name: "Manali Grand", duration: "8 Days / 7 Nights", features: ["Luxury mountain resort", "All inclusive", "Spiti Day Trip + Skiing", "Private guide"] },
+  ],
+},
+
+andaman: {
+  name: "Andaman Islands",
+  tagline: "Where the Sea Glows at Night",
+  description:
+    "The Andaman Islands are India's best-kept island secret — world-class snorkelling over coral reefs, bioluminescent beaches that shimmer after dark, the haunting Cellular Jail of Port Blair, and Robinson Crusoe isolation on Havelock and Neil Islands where time moves at the pace of the tide.",
+  heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1200&q=80",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80",
+  ],
+  rating: 4.8,
+  duration: "6-8 Days",
+  bestTime: "October - May",
+  highlights: ["Radhanagar Beach", "Cellular Jail", "Scuba Diving at Elephant Beach", "Bioluminescent Beach", "Ross Island", "Neil Island"],
+  itinerary: [
+    { day: 1, title: "Port Blair Arrival", description: "Fly into Port Blair, Corbyn's Cove beach, evening Cellular Jail Light & Sound Show." },
+    { day: 2, title: "Port Blair Sights", description: "Cellular Jail heritage tour, Ross Island ruins, North Bay coral snorkelling, seafood dinner." },
+    { day: 3, title: "Havelock Island", description: "Ferry to Havelock, check in, Radhanagar Beach (Asia's best beach) sunset, bioluminescent walk." },
+    { day: 4, title: "Scuba & Snorkelling", description: "Elephant Beach scuba diving or snorkelling, coral gardens, tropical fish, beach picnic lunch." },
+    { day: 5, title: "Neil Island", description: "Ferry to Neil Island, Natural Bridge, Bharatpur & Laxmanpur beaches, sunset cycling." },
+    { day: 6, title: "Return & Departure", description: "Ferry back to Port Blair, last beach walk, souvenir shopping, fly home." },
+  ],
+  inclusions: ["Beach Resorts", "Breakfast + Dinners", "Ferry Tickets", "Scuba Diving", "Cellular Jail Entry", "Transfers"],
+  packages: [
+    { name: "Andaman Intro", duration: "5 Days / 4 Nights", features: ["3-star resort", "Breakfast", "Port Blair + Havelock", "Snorkelling"] },
+    { name: "Island Hopper", duration: "7 Days / 6 Nights", features: ["4-star beach resort", "Breakfast + Dinners", "3 islands", "Scuba + Glass boat"] },
+    { name: "Andaman Luxury", duration: "9 Days / 8 Nights", features: ["5-star water villa", "All inclusive", "4 islands + Sea Walk", "Private guide"] },
+  ],
+},
+
+himachal: {
+  name: "Himachal Pradesh",
+  tagline: "Dev Bhoomi — Land of the Gods",
+  description:
+    "Himachal Pradesh is India's ultimate mountain state — from the snow-leopard country of Spiti Valley to the apple-scented Kinnaur hillsides, the trekking Mecca of Dharamsala, and the otherworldly moonscapes of Lahaul. Every valley reveals a different Himalayan world.",
+  heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1626621331169-5f34be280ed9?w=800&q=80",
+    // "https://images.unsplash.com/photo-1609766857896-7f65b41d638c?w=800&q=80",
+    // "https://images.unsplash.com/photo-1595658658481-d53d3f999875?w=800&q=80",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+  ],
+  rating: 4.8,
+  duration: "8-12 Days",
+  bestTime: "March - June, September - November",
+  highlights: ["Spiti Valley", "Dharamsala & McLeod Ganj", "Kinnaur Kailash", "Triund Trek", "Kasol & Parvati Valley", "Dalhousie"],
+  itinerary: [
+    { day: 1, title: "Shimla Base", description: "Fly/drive to Shimla, Mall Road, Jakhu Temple, colonial architecture walk." },
+    { day: 2, title: "Kinnaur Valley", description: "Drive along Sutlej river, Rampur, Sarahan Bhimakali Temple, apple orchards of Kinnaur." },
+    { day: 3, title: "Spiti Entry", description: "Nako Lake, Dhankar Monastery perched on a cliff, Tabo Cave Monastery (1000+ years old)." },
+    { day: 4, title: "Spiti Valley", description: "Kaza town, Key Monastery, Kibber village (world's highest motorable village), yak encounters." },
+    { day: 5, title: "Chandratal Lake", description: "Moon Lake at 4,300m, camping under a sky full of Milky Way, one of India's most surreal nights." },
+    { day: 6, title: "Manali via Rohtang", description: "Cross Rohtang Pass, Atal Tunnel, arrive Manali, Old Manali cafés and deodar forest walk." },
+    { day: 7, title: "Dharamsala", description: "Drive to McLeod Ganj, Dalai Lama's Temple, Tibetan monasteries, Triund trek afternoon." },
+    { day: 8, title: "Dalhousie & Khajjiar", description: "Khajjiar 'Mini Switzerland', Dainkund Peak, Dalhousie colonial churches, Panchpula waterfall." },
+    { day: 9, title: "Departure", description: "Return to Pathankot or Chandigarh, fly home." },
+  ],
+  inclusions: ["Mountain Hotels & Camps", "Breakfast Daily", "Spiti Permits", "All Sightseeing", "Trekking Guide", "Transfers"],
+  packages: [
+    { name: "Himachal Highlights", duration: "7 Days / 6 Nights", features: ["3-4 star hotels", "Breakfast", "Shimla + Manali + Dharamsala", "Key sights"] },
+    { name: "Spiti Explorer", duration: "10 Days / 9 Nights", features: ["Mountain lodges", "Breakfast + Dinners", "Spiti Valley circuit", "Chandratal camping"] },
+    { name: "Complete Himachal", duration: "14 Days / 13 Nights", features: ["Boutique & luxury stays", "All inclusive", "6 regions", "Private guide + Porter"] },
+  ],
+},
+
+munnar: {
+  name: "Munnar",
+  tagline: "Green Paradise of Kerala",
+  description:
+    "Munnar is Kerala's emerald crown — endless carpets of tea estates rolling over the Western Ghats, morning mist that blankets the valleys like silk, rare Neelakurinji flowers that bloom once in twelve years, and air so cool and clean it feels like the world's most therapeutic deep breath.",
+  heroImage: "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+    "https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=800&q=80",
+    // "https://images.unsplash.com/photo-1623091411395-09e79fdbfcf3?w=800&q=80",
+  ],
+  rating: 4.7,
+  duration: "4-6 Days",
+  bestTime: "September - March",
+  highlights: ["Eravikulam National Park", "Tea Museum", "Top Station", "Mattupetty Dam", "Attukad Waterfalls", "Rajamala Nilgiri Tahr"],
+  itinerary: [
+    { day: 1, title: "Munnar Arrival", description: "Drive from Kochi, tea estate views en route, Attukad Waterfalls, Munnar town market." },
+    { day: 2, title: "Tea Trails", description: "KDHP Tea Museum, tea factory tour, Mattupetty Dam & shola forests, Echo Point, cheese factory." },
+    { day: 3, title: "Eravikulam & Top Station", description: "Eravikulam National Park (Nilgiri Tahr), Top Station panoramic views over Tamil Nadu plains." },
+    { day: 4, title: "Plantation Stay", description: "Spice garden walk, cardamom and pepper picking, homestay cooking class, bonfire evening." },
+    { day: 5, title: "Departure", description: "Morning tea tasting, buy fresh estate tea, drive to Kochi for onward journey." },
+  ],
+  inclusions: ["Tea Estate Resort", "Breakfast + Dinner", "Tea Factory Tour", "Eravikulam Entry", "Plantation Walk", "Transfers"],
+  packages: [
+    { name: "Munnar Getaway", duration: "3 Days / 2 Nights", features: ["3-star resort", "Breakfast", "Tea museum + Mattupetty", "City tour"] },
+    { name: "Munnar Classic", duration: "5 Days / 4 Nights", features: ["Tea estate resort", "Breakfast + Dinners", "Full sightseeing + Eravikulam", "Spice garden"] },
+    { name: "Munnar Luxury", duration: "7 Days / 6 Nights", features: ["Luxury plantation bungalow", "All inclusive", "Private treks + Bird watching", "Ayurveda spa"] },
+  ],
+},
+
+kodaikanal: {
+  name: "Kodaikanal",
+  tagline: "The Princess of Hill Stations",
+  description:
+    "Kodaikanal is Tamil Nadu's mist-wrapped jewel perched at 2,100m — the star-shaped Kodai Lake for pedalo mornings, eucalyptus and pine forests hiding secret waterfalls, the dramatic Dolphin's Nose cliff, and a cool serenity that makes the plains feel like another planet.",
+  heroImage: "https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1582553690747-c6e48de1498e?w=800&q=80",
+    "https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=800&q=80",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+  ],
+  rating: 4.5,
+  duration: "3-5 Days",
+  bestTime: "April - June, September - November",
+  highlights: ["Kodai Lake", "Coaker's Walk", "Dolphin's Nose", "Silver Cascade Falls", "Pillar Rocks", "Bryant Park"],
+  itinerary: [
+    { day: 1, title: "Kodaikanal Arrival", description: "Drive up from Madurai or Coimbatore, Kodai Lake boat ride, Coaker's Walk sunset views." },
+    { day: 2, title: "Peaks & Viewpoints", description: "Pillar Rocks, Green Valley View (Suicide Point), Bear Shola Falls, Fairy Falls forest walk." },
+    { day: 3, title: "Dolphin's Nose & Caves", description: "Dolphin's Nose cliff walk, Liril Falls, Kodai Caves, Silver Cascade waterfall on descent road." },
+    { day: 4, title: "Bryant Park & Departure", description: "Bryant Park botanical garden, homemade chocolate shopping, eucalyptus oil, depart for plains." },
+  ],
+  inclusions: ["Hill Station Hotel", "Breakfast", "All Viewpoints", "Boat Ride", "Guided Walk", "Transfers"],
+  packages: [
+    { name: "Kodai Weekend", duration: "3 Days / 2 Nights", features: ["3-star hotel", "Breakfast", "Lake + Coaker's Walk + Pillar Rocks"] },
+    { name: "Kodai Explorer", duration: "5 Days / 4 Nights", features: ["4-star resort", "Breakfast + Dinners", "Full sightseeing circuit", "Forest trek"] },
+    { name: "Kodai Luxury", duration: "6 Days / 5 Nights", features: ["Boutique resort", "All inclusive", "Private nature guide", "Cycle tour + Spa"] },
+  ],
+},
+
+coorg: {
+  name: "Coorg",
+  tagline: "Scotland of India",
+  description:
+    "Coorg is Karnataka's wild, rain-drenched coffee country — mist-covered estates where arabica beans ripen under silver oaks, the sacred Talacauvery river source, thrilling River Tern white-water rafting, centuries-old Kodava warrior culture, and a cuisine as bold and aromatic as the land itself.",
+  heroImage: "/locations/coorg/coorg1.jfif",
+  images: [
+    "https://images.unsplash.com/photo-1625813366060-9e62b5ef4a8c?w=800&q=80",
+    "https://images.unsplash.com/photo-1579531403017-b7f14a2b857a?w=800&q=80",
+    "https://images.unsplash.com/photo-1585136917228-1d3c4b4f7e2e?w=800&q=80",
+  ],
+  rating: 4.7,
+  duration: "4-6 Days",
+  bestTime: "October - March",
+  highlights: ["Abbey Falls", "Talacauvery", "Dubare Elephant Camp", "Nagarhole Safari", "Raja's Seat", "Coffee Plantation Stay"],
+  itinerary: [
+    { day: 1, title: "Coorg Arrival", description: "Drive from Mysore or Bangalore, check into coffee estate, Raja's Seat sunset viewpoint, Kodava dinner." },
+    { day: 2, title: "Plantation & Waterfalls", description: "Guided coffee estate walk, harvest and roasting demo, Abbey Falls trek, Iruppu Falls." },
+    { day: 3, title: "Dubare & Rafting", description: "Dubare Elephant Camp — bathe elephants in Cauvery, white-water rafting at Barapole River." },
+    { day: 4, title: "Talacauvery & Brahmagiri", description: "Talacauvery temple (Cauvery source), Brahmagiri Wildlife Sanctuary trek, Bhagamandala confluence." },
+    { day: 5, title: "Nagarhole Safari & Departure", description: "Early morning jeep safari in Nagarhole National Park, tigers, leopards and wild elephants, depart." },
+  ],
+  inclusions: ["Coffee Estate Resort", "Breakfast + Dinner", "Elephant Camp", "Rafting", "Safari", "Transfers"],
+  packages: [
+    { name: "Coorg Escape", duration: "3 Days / 2 Nights", features: ["Plantation stay", "Breakfast", "Abbey Falls + Raja's Seat + Estate tour"] },
+    { name: "Coorg Classic", duration: "5 Days / 4 Nights", features: ["Coffee resort", "Breakfast + Dinners", "Elephant + Rafting + Talacauvery", "All sightseeing"] },
+    { name: "Coorg Wild", duration: "7 Days / 6 Nights", features: ["Luxury forest lodge", "All inclusive", "Nagarhole safari + Coorg circuit", "Private nature guide"] },
+  ],
+},
+
+kerala: {
+  name: "Kerala",
+  tagline: "God's Own Country",
+  description:
+    "Kerala is India distilled into its most beautiful, graceful form — houseboats drifting through the mirror-calm Alleppey backwaters, Kathakali dancers in vivid costume, Ayurveda treatments that restore the body, Wayanad's misty forest treks, and golden beaches where the Arabian Sea meets swaying coconut palms.",
+  heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&q=80",
+    "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=80",
+    "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80",
+  ],
+  rating: 4.9,
+  duration: "7-10 Days",
+  bestTime: "September - March",
+  highlights: ["Alleppey Backwaters Houseboat", "Munnar Tea Estates", "Periyar Tiger Reserve", "Kovalam Beach", "Kochi Fort", "Kathakali Show"],
+  itinerary: [
+    { day: 1, title: "Kochi Arrival", description: "Fort Kochi spice market, Chinese fishing nets, Mattancherry Palace, St Francis Church, sunset cruise." },
+    { day: 2, title: "Kochi & Kathakali", description: "Jew Town antiques, Kerala Folklore Museum, evening Kathakali and Kalaripayattu performance." },
+    { day: 3, title: "Munnar", description: "Drive to Munnar through spice gardens, Attukad Waterfalls, tea estate check-in, plantation walk." },
+    { day: 4, title: "Munnar Highlands", description: "Eravikulam National Park Nilgiri Tahr, Top Station, Mattupetty Dam, tea factory tour." },
+    { day: 5, title: "Periyar", description: "Drive to Thekkady, Periyar boat safari for elephants and tigers, spice market, bamboo rafting." },
+    { day: 6, title: "Alleppey Houseboat", description: "Board a houseboat on the Vembanad Lake backwaters, village life on the banks, fresh Kerala meals." },
+    { day: 7, title: "Kovalam Beach", description: "Drive to Kovalam, Lighthouse Beach sunset, Ayurveda massage, seafood by the sea." },
+    { day: 8, title: "Trivandrum & Departure", description: "Padmanabhaswamy Temple, Napier Museum, local Kerala sadhya lunch, fly home." },
+  ],
+  inclusions: ["Heritage Hotels & Houseboat", "All Meals on Houseboat", "Breakfast Daily", "Periyar Safari", "Kathakali Show", "Transfers"],
+  packages: [
+    { name: "Kerala Intro", duration: "6 Days / 5 Nights", features: ["3-4 star hotels", "Breakfast", "Kochi + Munnar + Alleppey", "Houseboat night"] },
+    { name: "God's Own Country", duration: "9 Days / 8 Nights", features: ["4-5 star + houseboat", "Breakfast + Select Dinners", "5 destinations", "Kathakali + Periyar"] },
+    { name: "Luxury Kerala", duration: "12 Days / 11 Nights", features: ["Luxury heritage resorts", "All inclusive", "Full Kerala circuit", "Ayurveda retreat", "Private guide"] },
+  ],
+},
+
+ooty: {
+  name: "Ooty",
+  tagline: "Queen of Nilgiris",
+  description:
+    "Ooty is a timeless Nilgiri escape — the romantic Nilgiri Mountain Railway toy train cutting through dense shola forests, the rose-scented Botanical Garden, the mirror-smooth Ooty Lake for morning rowing, eucalyptus-perfumed air, and an old-world charm that has charmed every generation of visitor since 1818.",
+  heroImage: "https://images.unsplash.com/photo-1593696954577-ab3d39317b97?q=80&w=1200&auto=format&fit=crop",
+  images: [
+    "https://upload.wikimedia.org/wikipedia/commons/4/4c/Government_Botanical_garden_%2Cooty.jpg",
+    "https://images.unsplash.com/photo-1580181921170-8d1025fe2e55?q=80&w=1200&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1582553690747-c6e48de1498e?w=800&q=80",
+  ],
+  rating: 4.5,
+  duration: "3-5 Days",
+  bestTime: "April - June, September - November",
+  highlights: ["Nilgiri Mountain Railway", "Botanical Garden", "Doddabetta Peak", "Ooty Lake", "Pykara Falls", "Mudumalai Safari"],
+  itinerary: [
+    { day: 1, title: "Ooty Arrival", description: "Arrive via Mettupalayam on toy train, Botanical Garden roses, Ooty Lake boat ride, bison sighting at dusk." },
+    { day: 2, title: "Peaks & Falls", description: "Doddabetta Peak (Nilgiris highest at 2,637m), Pykara Falls & Lake, Emerald Lake shola walk." },
+    { day: 3, title: "Tea & Villages", description: "Toda tribal village visit, tea estate tour, Lamb's Rock & Dolphin's Nose viewpoints near Coonoor." },
+    { day: 4, title: "Mudumalai & Departure", description: "Mudumalai National Park safari — elephants, spotted deer, gaur, sambar, depart from Ooty." },
+  ],
+  inclusions: ["Colonial Bungalow Hotel", "Breakfast", "Toy Train Ticket", "Botanical Garden", "Safari Entry", "Transfers"],
+  packages: [
+    { name: "Ooty Weekend", duration: "3 Days / 2 Nights", features: ["3-star hotel", "Breakfast", "Lake + Garden + Doddabetta", "City tour"] },
+    { name: "Nilgiri Explorer", duration: "5 Days / 4 Nights", features: ["4-star resort", "Breakfast + Dinners", "Toy Train + Coonoor + Pykara", "Full sightseeing"] },
+    { name: "Ooty Luxury", duration: "7 Days / 6 Nights", features: ["Heritage colonial bungalow", "All inclusive", "Mudumalai safari + Kotagiri", "Private nature guide"] },
+  ],
+},
+
+kashmir: {
+  name: "Kashmir",
+  tagline: "Paradise on Earth",
+  description:
+    "Kashmir is the most breathtaking place on the subcontinent — a Shikara drifting past lotus gardens on Dal Lake at dawn, the saffron fields of Pampore, tulip carpets in spring at the Asia's largest tulip garden, powder-snow skiing at Gulmarg, and the crystalline alpine meadows of Sonamarg that no photograph fully captures.",
+  heroImage: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1200&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=1200&q=80",
+    "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=1200&q=80",
+    "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200&q=80",
+  ],
+  rating: 4.9,
+  duration: "6-8 Days",
+  bestTime: "April - June (Spring/Tulips), December - February (Snow)",
+  highlights: ["Dal Lake Shikara", "Gulmarg Gondola", "Pahalgam Betaab Valley", "Sonamarg Glacier", "Mughal Gardens", "Asia's Largest Tulip Garden"],
+  itinerary: [
+    { day: 1, title: "Srinagar Arrival", description: "Fly to Srinagar, check into a Dal Lake houseboat, Shikara ride at golden hour, floating market." },
+    { day: 2, title: "Srinagar Mughal Gardens", description: "Nishat Bagh, Shalimar Bagh, Chashme Shahi, Shankaracharya Temple, old city carpet weavers." },
+    { day: 3, title: "Gulmarg", description: "Day trip to Gulmarg, Gondola ride to Apharwat Peak (3,980m), snow activities, meadow horse ride." },
+    { day: 4, title: "Pahalgam", description: "Drive to Pahalgam, Betaab Valley (DDLJ), Aru Valley, Baisaran 'Mini Switzerland', trout fishing." },
+    { day: 5, title: "Sonamarg", description: "Sonamarg 'Golden Meadow', Thajiwas Glacier trek, Sindh River, Baltal base camp views." },
+    { day: 6, title: "Dal Lake & Departure", description: "Early morning floating vegetable market Shikara, saffron and pashmina shopping, fly home." },
+  ],
+  inclusions: ["Heritage Houseboat + Hotel", "All Meals on Houseboat", "Breakfast", "Gulmarg Gondola", "Shikara Rides", "Transfers"],
+  packages: [
+    { name: "Kashmir Intro", duration: "5 Days / 4 Nights", features: ["Houseboat + hotel", "Breakfast", "Srinagar + Gulmarg + Pahalgam", "Shikara ride"] },
+    { name: "Paradise Kashmir", duration: "7 Days / 6 Nights", features: ["Deluxe houseboat", "Breakfast + Dinners", "4 valleys + Mughal gardens", "Gondola ride"] },
+    { name: "Royal Kashmir", duration: "9 Days / 8 Nights", features: ["Luxury houseboat + 5-star", "All inclusive", "Full circuit + Sonamarg", "Pashmina factory visit", "Private guide"] },
+  ],
+},
+
+darjeeling: {
+  name: "Darjeeling",
+  tagline: "Queen of the Himalayas",
+  description:
+    "Darjeeling is a hill station like no other — the world's most prized tea grown on estates that cling to the clouds, the Darjeeling Himalayan Railway toy train puffing through mist, Kanchenjunga rising pink at dawn from Tiger Hill, Tibetan monasteries, and a cosmopolitan colonial-era charm that blends perfectly with Bengali warmth.",
+  heroImage: "https://images.unsplash.com/photo-1544015759-237f87e3e8c6?w=1920&q=80",
+  images: [
+    "https://images.unsplash.com/photo-1571401835393-8c5f35328320?w=800&q=80",
+    
+  ],
+  rating: 4.7,
+  duration: "4-6 Days",
+  bestTime: "March - May, September - November",
+  highlights: ["Tiger Hill Sunrise", "Darjeeling Toy Train", "Happy Valley Tea Estate", "Batasia Loop", "Padmaja Naidu Zoo", "Ghoom Monastery"],
+  itinerary: [
+    { day: 1, title: "Darjeeling Arrival", description: "Arrive from NJP or Bagdogra, toy train from Ghoom, Mall Road, Chowrasta square, momos dinner." },
+    { day: 2, title: "Tiger Hill Sunrise", description: "Pre-dawn drive to Tiger Hill — Kanchenjunga and Everest at sunrise, Batasia Loop toy train loop, Ghoom Monastery." },
+    { day: 3, title: "Tea & Culture", description: "Happy Valley Tea Estate factory visit, tea tasting, Himalayan Mountaineering Institute, Padmaja Zoo (red panda)." },
+    { day: 4, title: "Mirik & Peace Pagoda", description: "Mirik Lake, Japanese Peace Pagoda, rock garden, orange orchards, Japanese Buddhist temple." },
+    { day: 5, title: "Departure", description: "Last tea tasting session, buy first flush Darjeeling, drive down to Bagdogra, fly home." },
+  ],
+  inclusions: ["Heritage Bungalow Hotel", "Breakfast + Evening Tea", "Toy Train Ride", "Tiger Hill Drive", "Tea Estate Tour", "Transfers"],
+  packages: [
+    { name: "Darjeeling Weekend", duration: "3 Days / 2 Nights", features: ["3-star hotel", "Breakfast", "Tiger Hill + Tea Estate + Toy Train"] },
+    { name: "Darjeeling Classic", duration: "5 Days / 4 Nights", features: ["Heritage hotel", "Breakfast + Dinners", "Full circuit + Mirik + Zoo", "Tea tasting"] },
+    { name: "Darjeeling Luxury", duration: "7 Days / 6 Nights", features: ["Colonial luxury bungalow", "All inclusive", "Sikkim day trip + Pelling", "Private tea master session"] },
+  ],
+},
+
 }
 
 // Default destination data for unlisted destinations
@@ -630,7 +1173,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px]">
+      <section className="relative h-[80vh] min-h-[500px]">
         <Image
           src={destination.heroImage}
           alt={destination.name}
@@ -641,11 +1184,11 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
         <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-16">
-            <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors">
+          <div className="container mx-auto px-4 pb-16 ">
+            {/* <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors">
               <ChevronLeft className="h-5 w-5" />
               Back to Home
-            </Link>
+            </Link> */}
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-2 bg-secondary text-white text-sm font-semibold rounded-full mb-4">
                 {destination.tagline}

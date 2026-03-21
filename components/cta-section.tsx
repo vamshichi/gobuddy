@@ -9,6 +9,36 @@ export function CTASection() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
+  const [email, setEmail] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  const handleSubscribe = async () => {
+    if (!email) return
+
+    setLoading(true)
+
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        alert("Subscribed successfully!")
+        setEmail("")
+      }
+    } catch (error) {
+      console.log(error)
+    }
+
+    setLoading(false)
+  }
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -39,9 +69,8 @@ export function CTASection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div
-          className={`max-w-4xl mx-auto transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`max-w-4xl mx-auto transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           {/* Main CTA Card */}
           <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
@@ -95,9 +124,8 @@ export function CTASection() {
 
           {/* Newsletter Section */}
           <div
-            className={`mt-6 sm:mt-8 md:mt-12 bg-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl border border-border transition-all duration-700 delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`mt-6 sm:mt-8 md:mt-12 bg-card rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl border border-border transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8 items-center">
               <div className="text-center md:text-left">
@@ -112,10 +140,15 @@ export function CTASection() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2.5 sm:py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm sm:text-base min-w-0"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 px-4 py-2.5 sm:py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm sm:text-base"
                 />
-                <Button className="bg-secondary hover:bg-secondary/90 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base whitespace-nowrap">
-                  Subscribe
+                <Button
+                  onClick={handleSubscribe}
+                  className="bg-secondary hover:bg-secondary/90 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl"
+                >
+                  {loading ? "Subscribing..." : "Subscribe"}
                 </Button>
               </div>
             </div>

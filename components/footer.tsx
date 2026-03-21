@@ -15,7 +15,7 @@ const quickLinks = [
 const domesticLinks = [
   { name: "Goa", href: "/destinations/goa" },
   { name: "Kerala", href: "/destinations/kerala" },
-  { name: "Himachal Pradesh", href: "/destinations/himachal-pradesh" },
+  { name: "Himachal Pradesh", href: "/destinations/himachal" },
   { name: "Rajasthan", href: "/destinations/rajasthan" },
   { name: "Kashmir", href: "/destinations/jammu-and-kashmir" },
   { name: "Andaman", href: "/destinations/andaman-nicobar" },

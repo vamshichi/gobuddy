@@ -12,8 +12,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+const honeymoonIndia = [
+  "Goa", "Kerala",  "Manali", "Andaman", "Himachal",
+  "Munnar", "Kashmir"
+]
+
+const honeymoonInternational = [
+  "Maldives", "Bali","Switzerland", 
+  "Paris", "Italy", "Thailand", "Dubai", "Sri Lanka",
+  "Singapore", "Malaysia", "South Africa",
+  "Australia", "Spain", "Europe"
+]
+
 const domesticDestinations = [
-  "Goa", "Kerala", "Himachal Pradesh", "Coorg", "Andaman & Nicobar",
+  "Goa", "Kerala", "Himachal", "Coorg", "Andaman & Nicobar",
   "Rajasthan", "Hyderabad", "Bangalore", "Jammu and Kashmir"
 ]
 
@@ -37,8 +49,8 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
-          : "bg-black/40 py-4"
+        ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
+        : "bg-black/40 py-4"
         }`}
     >
       <div className="container mx-auto px-4">
@@ -48,9 +60,9 @@ export function Header() {
             <Image
               src="/images/gb-logo.png"
               alt="GoBuddy Holidays"
-              width={180}
-              height={60}
-              className="h-12 w-auto md:h-14"
+              width={200}
+              height={80}
+              className="h-16 w-auto md:h-16"
             />
           </Link>
 
@@ -97,6 +109,62 @@ export function Header() {
                     </Link>
                   </DropdownMenuItem>
                 ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                  }`}
+              >
+                Honeymoon <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent className="grid grid-cols-2 gap-6 w-[520px] p-6">
+
+                {/* India */}
+                <div>
+                  <p className="font-semibold mb-2">India</p>
+                  <ul className="space-y-1 text-sm">
+                    {honeymoonIndia.map((dest) => (
+                      <li key={dest}>
+                        <Link
+                          href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
+                          className="hover:text-primary"
+                        >
+                          • {dest}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* International */}
+                <div>
+                  <p className="font-semibold mb-2">International</p>
+                  <ul className="space-y-1 text-sm">
+                    {honeymoonInternational.map((dest) => (
+                      <li key={dest}>
+                        <Link
+                          href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
+                          className="hover:text-primary"
+                        >
+                          • {dest}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Button */}
+                {/* <div className="col-span-2 pt-3">
+                  <Link href="/honeymoon">
+                    <Button className="bg-black text-white hover:bg-black/80 w-full">
+                      View All Honeymoon Packages
+                    </Button>
+                  </Link>
+                </div> */}
+
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -191,13 +259,21 @@ export function Header() {
               </Link>
 
               <div className="flex flex-col gap-2 pt-2">
+                <Link
+              href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
+              target="_blank"
+              rel="noopener noreferrer"
+            > 
                 <Button variant="outline" className="w-full gap-2">
                   <MapPin className="h-4 w-4" />
                 </Button>
+                </Link>
+                <Link href="/contact">
                 <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
                   <MapPin className="h-4 w-4" />
                   Plan Your Trip
                 </Button>
+                </Link>
               </div>
             </nav>
           </div>
