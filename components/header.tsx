@@ -13,12 +13,12 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 const honeymoonIndia = [
-  "Goa", "Kerala",  "Manali", "Andaman", "Himachal",
+  "Goa", "Kerala", "Manali", "Andaman", "Himachal",
   "Munnar", "Kashmir"
 ]
 
 const honeymoonInternational = [
-  "Maldives", "Bali","Switzerland", 
+  "Maldives", "Bali", "Switzerland",
   "Paris", "Italy", "Thailand", "Dubai", "Sri Lanka",
   "Singapore", "Malaysia", "South Africa",
   "Australia", "Spain", "Europe"
@@ -251,6 +251,36 @@ export function Header() {
                 </div>
               </div>
 
+              <div className="border-b pb-2">
+                <p className="font-semibold text-primary mb-2">Honeymoon Destinations</p>
+
+                <p className="text-xs font-medium text-muted-foreground mb-1">India</p>
+                <div className="grid grid-cols-2 gap-2 mb-2">
+                  {honeymoonIndia.map((dest) => (
+                    <Link
+                      key={dest}
+                      href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
+                      className="text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {dest}
+                    </Link>
+                  ))}
+                </div>
+
+                <p className="text-xs font-medium text-muted-foreground mb-1">International</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {honeymoonInternational.map((dest) => (
+                    <Link
+                      key={dest}
+                      href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
+                      className="text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {dest}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               <Link href="/about" className="font-medium text-foreground py-2">
                 About Us
               </Link>
@@ -260,19 +290,19 @@ export function Header() {
 
               <div className="flex flex-col gap-2 pt-2">
                 <Link
-              href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
-              target="_blank"
-              rel="noopener noreferrer"
-            > 
-                <Button variant="outline" className="w-full gap-2">
-                  <MapPin className="h-4 w-4" />
-                </Button>
+                  href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="w-full gap-2">
+                    <MapPin className="h-4 w-4" />
+                  </Button>
                 </Link>
                 <Link href="/contact">
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
-                  <MapPin className="h-4 w-4" />
-                  Plan Your Trip
-                </Button>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
+                    <MapPin className="h-4 w-4" />
+                    Plan Your Trip
+                  </Button>
                 </Link>
               </div>
             </nav>
