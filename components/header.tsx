@@ -12,6 +12,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+
+const pilgrimageDestinations = [
+  "Tirupati", "Sabarimala", "Rameswaram", "Kedarnath", "Badrinath",
+  "Varanasi", "Haridwar", "Amarnath", "Madurai",
+]
+
 const honeymoonIndia = [
   "Goa", "Kerala", "Manali", "Andaman", "Himachal",
   "Munnar", "Kashmir"
@@ -25,8 +31,8 @@ const honeymoonInternational = [
 ]
 
 const domesticDestinations = [
-  "Goa", "Kerala", "Himachal", "Coorg", "Andaman & Nicobar",
-  "Rajasthan", "Hyderabad", "Bangalore", "Jammu and Kashmir"
+  "Goa", "Kerala", "Himachal", "Coorg", "Andaman",
+  "Rajasthan", "Hyderabad", "Bangalore", "Kashmir"
 ]
 
 const internationalDestinations = [
@@ -156,6 +162,8 @@ export function Header() {
                   </ul>
                 </div>
 
+
+
                 {/* Button */}
                 {/* <div className="col-span-2 pt-3">
                   <Link href="/honeymoon">
@@ -165,6 +173,29 @@ export function Header() {
                   </Link>
                 </div> */}
 
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground" : "text-white"
+                  }`}
+              >
+                Pilgrimage <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent className="grid grid-cols-2 gap-1 w-80 p-2">
+                {pilgrimageDestinations.map((dest) => (
+                  <DropdownMenuItem key={dest} asChild>
+                    <Link
+                      href={`/destinations/${dest
+                        .toLowerCase()
+                        .replace(/ /g, "-")}`}
+                    >
+                      {dest}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -215,7 +246,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t animate-in slide-in-from-top-2">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t animate-in slide-in-from-top-2 max-h-[85vh] overflow-y-auto">
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
               <Link href="/" className="font-medium text-foreground py-2">
                 Home
@@ -265,6 +296,23 @@ export function Header() {
                       {dest}
                     </Link>
                   ))}
+                </div>
+
+                <div className="border-b pb-2">
+                  <p className="font-semibold text-primary mb-2">Pilgrimage Destinations</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {pilgrimageDestinations.map((dest) => (
+                      <Link
+                        key={dest}
+                        href={`/destinations/${dest
+                          .toLowerCase()
+                          .replace(/ /g, "-")}`}
+                        className="text-sm text-muted-foreground hover:text-primary"
+                      >
+                        {dest}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
 
                 <p className="text-xs font-medium text-muted-foreground mb-1">International</p>

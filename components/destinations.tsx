@@ -25,8 +25,8 @@ const domesticDestinations = [
   },
   {
     name: "Himachal Pradesh",
-    slug: "himachal-pradesh",
-    image: "https://images.unsplash.com/photo-1585544314038-a0d3769d0193?w=800&q=80",
+    slug: "himachal",
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&q=80",
     rating: 4.7,
     duration: "5-7 Days",
     tag: "Mountains",
@@ -34,7 +34,7 @@ const domesticDestinations = [
   {
     name: "Rajasthan",
     slug: "rajasthan",
-    image: "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800&q=80",
+    image: "/destinactions/Rajasthan/Rajasthan2.jpg",
     rating: 4.8,
     duration: "5-7 Days",
     tag: "Heritage",
@@ -50,7 +50,7 @@ const domesticDestinations = [
   {
     name: "Kashmir",
     slug: "kashmir",
-    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1200&q=80",
     rating: 4.9,
     duration: "5-7 Days",
     tag: "Paradise",
@@ -108,6 +108,249 @@ const internationalDestinations = [
   },
 ]
 
+const honeymoonDestinations = [
+  // India
+  {
+    name: "Goa",
+    slug: "goa",
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80",
+    rating: 4.8,
+    duration: "3-5 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Kerala",
+    slug: "kerala",
+    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+    rating: 4.9,
+    duration: "4-6 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Manali",
+    slug: "manali",
+    image: "/destinactions/Manali/Manali2.jpg",
+    rating: 4.8,
+    duration: "4-6 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Andaman",
+    slug: "andaman_nicobar",
+    image: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=80",
+    rating: 4.8,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Munnar",
+    slug: "kerala",
+    image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&q=80",
+    rating: 4.8,
+    duration: "3-4 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Kashmir",
+    slug: "kashmir",
+    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=800&q=80",
+    rating: 4.9,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+
+  // International
+  {
+    name: "Maldives",
+    slug: "maldives",
+    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
+    rating: 5.0,
+    duration: "4-6 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Bali",
+    slug: "bali",
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    rating: 4.8,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Switzerland",
+    slug: "switzerland",
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80",
+    rating: 4.9,
+    duration: "6-8 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Paris",
+    slug: "paris",
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
+    rating: 4.9,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Italy",
+    slug: "italy",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&q=80",
+    rating: 4.9,
+    duration: "6-8 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Thailand",
+    slug: "thailand",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80",
+    rating: 4.8,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Dubai",
+    slug: "dubai",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    rating: 4.9,
+    duration: "4-6 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Sri Lanka",
+    slug: "sri-lanka",
+    image: "/destinactions/lanka/sri2.jpg",
+    rating: 4.7,
+    duration: "6-8 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Singapore",
+    slug: "singapore",
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
+    rating: 4.8,
+    duration: "4-5 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Malaysia",
+    slug: "malaysia",
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80",
+    rating: 4.7,
+    duration: "5-7 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "South Africa",
+    slug: "south-africa",
+    image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80",
+    rating: 4.8,
+    duration: "8-10 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Australia",
+    slug: "australia",
+    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80",
+    rating: 4.8,
+    duration: "8-12 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Spain",
+    slug: "spain",
+    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=800&q=80",
+    rating: 4.8,
+    duration: "7-10 Days",
+    tag: "Honeymoon",
+  },
+  {
+    name: "Europe",
+    slug: "europe",
+    image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
+    rating: 4.9,
+    duration: "10-15 Days",
+    tag: "Honeymoon",
+  },
+]
+
+const pilgrimageDestinations = [
+  {
+    name: "Tirupati",
+    slug: "tirupati",
+    image: "/destinactions/tirupati/tirupati.jpg",
+    rating: 4.9,
+    duration: "1-2 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Sabarimala",
+    slug: "sabarimala",
+    image: "/destinactions/Sabarimala/Sabarimala.jpg",
+    rating: 4.8,
+    duration: "2-3 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Rameswaram",
+    slug: "rameswaram",
+    image: "/destinactions/Rameswaram/Rameswaram.jpg",
+    rating: 4.8,
+    duration: "2-3 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Kedarnath",
+    slug: "kedarnath",
+    image: "/destinactions/Kedarnath/Kedarnath2.jpg",
+    rating: 4.9,
+    duration: "4-6 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Badrinath",
+    slug: "badrinath",
+    image: "https://images.unsplash.com/photo-1627894483216-2138af692e32?w=800&q=80",
+    rating: 4.9,
+    duration: "3-5 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Varanasi",
+    slug: "varanasi",
+    image: "https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=800&q=80",
+    rating: 4.8,
+    duration: "2-4 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Haridwar",
+    slug: "haridwar",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800&q=80",
+    rating: 4.7,
+    duration: "2-3 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Amarnath",
+    slug: "amarnath",
+    image: "/destinactions/Amarnath/Amarnath.jpg",
+    rating: 4.9,
+    duration: "4-6 Days",
+    tag: "Pilgrimage",
+  },
+  {
+    name: "Madurai",
+    slug: "madurai",
+    image: "/destinactions/Madurai/Madurai.jpg",
+    rating: 4.8,
+    duration: "2-3 Days",
+    tag: "Pilgrimage",
+  },
+  
+]
+
+
 function DestinationCard({ destination, index }: { destination: { name: string; slug: string; image: string; rating: number; duration: string; tag: string }; index: number }) {
   const [isVisible, setIsVisible] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
@@ -132,9 +375,8 @@ function DestinationCard({ destination, index }: { destination: { name: string; 
   return (
     <div
       ref={cardRef}
-      className={`group relative overflow-hidden rounded-2xl bg-card shadow-lg transition-all duration-500 hover:shadow-2xl ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`group relative overflow-hidden rounded-2xl bg-card shadow-lg transition-all duration-500 hover:shadow-2xl ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       <div className="relative h-64 overflow-hidden">
         <Image
@@ -144,7 +386,7 @@ function DestinationCard({ destination, index }: { destination: { name: string; 
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        
+
         {/* Tag */}
         <div className="absolute top-4 left-4">
           <span className="px-3 py-1 bg-secondary text-white text-xs font-semibold rounded-full">
@@ -259,6 +501,16 @@ export function Destinations() {
           destinations={internationalDestinations}
           title="International Wonders"
           subtitle="Discover the World"
+        />
+        <DestinationSlider
+          destinations={honeymoonDestinations}
+          title="Honeymoon Destinations"
+          subtitle="Romantic Getaways"
+        />
+        <DestinationSlider
+          destinations={pilgrimageDestinations}
+          title="Pilgrimage Destinations"
+          subtitle="Sacred Journeys"
         />
 
         <div className="text-center mt-8">

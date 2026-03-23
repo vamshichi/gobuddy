@@ -13,28 +13,44 @@ const allDestinations = [
   // Domestic
   { name: "Goa", slug: "goa", type: "domestic", image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&q=80", rating: 4.8, duration: "3-5 Days", tag: "Beach Paradise" },
   { name: "Kerala", slug: "kerala", type: "domestic", image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80", rating: 4.9, duration: "4-6 Days", tag: "Backwaters" },
-  { name: "Himachal Pradesh", slug: "himachal-pradesh", type: "domestic", image: "https://images.unsplash.com/photo-1585544314038-a0d3769d0193?w=800&q=80", rating: 4.7, duration: "5-7 Days", tag: "Mountains" },
-  { name: "Rajasthan", slug: "rajasthan", type: "domestic", image: "https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Heritage" },
-  { name: "Andaman & Nicobar", slug: "andaman-nicobar", type: "domestic", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80", rating: 4.9, duration: "5-7 Days", tag: "Island" },
-  { name: "Jammu and Kashmir", slug: "jammu-and-kashmir", type: "domestic", image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80", rating: 4.9, duration: "5-7 Days", tag: "Paradise" },
+  { name: "Himachal Pradesh", slug: "himachal", type: "domestic", image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&q=80", rating: 4.7, duration: "5-7 Days", tag: "Mountains" },
+  { name: "Rajasthan", slug: "rajasthan", type: "domestic", image: "/destinactions/Rajasthan/Rajasthan1.jpg", rating: 4.8, duration: "5-7 Days", tag: "Heritage" },
+  { name: "Andaman & Nicobar", slug: "andaman", type: "domestic", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80", rating: 4.9, duration: "5-7 Days", tag: "Island" },
+  { name: "Jammu and Kashmir", slug: "kashmir", type: "domestic", image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80", rating: 4.9, duration: "5-7 Days", tag: "Paradise" },
   { name: "Coorg", slug: "coorg", type: "domestic", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80", rating: 4.6, duration: "3-4 Days", tag: "Hill Station" },
-  { name: "Hyderabad", slug: "hyderabad", type: "domestic", image: "https://images.unsplash.com/photo-1572383672419-ab35444a6934?w=800&q=80", rating: 4.5, duration: "2-3 Days", tag: "Heritage" },
+  { name: "Hyderabad", slug: "hyderabad", type: "domestic", image: "/destinactions/Hyderabad/Hyderabad1.jpg", rating: 4.5, duration: "2-3 Days", tag: "Heritage" },
   { name: "Bangalore", slug: "bangalore", type: "domestic", image: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800&q=80", rating: 4.4, duration: "2-3 Days", tag: "Tech City" },
   // International
   { name: "Dubai", slug: "dubai", type: "international", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", rating: 4.9, duration: "4-6 Days", tag: "Luxury" },
   { name: "Singapore", slug: "singapore", type: "international", image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80", rating: 4.8, duration: "4-5 Days", tag: "Modern" },
-  { name: "Thailand", slug: "thailand", type: "international", image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", rating: 4.7, duration: "5-7 Days", tag: "Adventure" },
-  { name: "Maldives", slug: "maldives", type: "international", image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80", rating: 5.0, duration: "4-6 Days", tag: "Romantic" },
-  { name: "Bali", slug: "bali", type: "international", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Tropical" },
-  { name: "Switzerland", slug: "switzerland", type: "international", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80", rating: 4.9, duration: "6-8 Days", tag: "Scenic" },
-  { name: "Paris", slug: "paris", type: "international", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Romance" },
+  // { name: "Thailand", slug: "thailand", type: "international", image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", rating: 4.7, duration: "5-7 Days", tag: "Adventure" },
+  // { name: "Maldives", slug: "maldives", type: "international", image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80", rating: 5.0, duration: "4-6 Days", tag: "Romantic" },
+  // { name: "Bali", slug: "bali", type: "international", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Tropical" },
+  // { name: "Switzerland", slug: "switzerland", type: "international", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80", rating: 4.9, duration: "6-8 Days", tag: "Scenic" },
+  // { name: "Paris", slug: "paris", type: "international", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Romance" },
   { name: "Australia", slug: "australia", type: "international", image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80", rating: 4.7, duration: "8-10 Days", tag: "Adventure" },
   { name: "Malaysia", slug: "malaysia", type: "international", image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80", rating: 4.6, duration: "5-6 Days", tag: "Diverse" },
   { name: "Vietnam", slug: "vietnam", type: "international", image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80", rating: 4.7, duration: "6-8 Days", tag: "Cultural" },
+
+  // Honeymoon
+  { name: "Maldives", slug: "maldives", type: "honeymoon", image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80", rating: 5.0, duration: "4-6 Days", tag: "Honeymoon" },
+  { name: "Bali", slug: "bali", type: "honeymoon", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Honeymoon" },
+  { name: "Switzerland", slug: "switzerland", type: "honeymoon", image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80", rating: 4.9, duration: "6-8 Days", tag: "Honeymoon" },
+  { name: "Paris", slug: "paris", type: "honeymoon", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", rating: 4.8, duration: "5-7 Days", tag: "Honeymoon" },
+  { name: "Thailand", slug: "thailand", type: "honeymoon", image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", rating: 4.7, duration: "5-7 Days", tag: "Honeymoon" },
+
+  // Pilgrimage
+  { name: "Tirupati", slug: "tirupati", type: "pilgrimage", image: "/destinactions/Tirupati/tirupati.jpg", rating: 4.9, duration: "1-2 Days", tag: "Pilgrimage" },
+  { name: "Rameswaram", slug: "rameswaram", type: "pilgrimage", image: "/destinactions/Rameswaram/rameswaram.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
+  { name: "Kedarnath", slug: "kedarnath", type: "pilgrimage", image: "/destinactions/Kedarnath/kedarnath2.jpg", rating: 4.9, duration: "4-6 Days", tag: "Pilgrimage" },
+  { name: "Badrinath", slug: "badrinath", type: "pilgrimage", image: "/destinactions/Badrinath/badrinath.jpg", rating: 4.9, duration: "3-5 Days", tag: "Pilgrimage" },
+  // { name: "Vaishno Devi", slug: "vaishno-devi", type: "pilgrimage", image: "/destinactions/VaishnoDevi/vaishno.jpg", rating: 4.9, duration: "2-3 Days", tag: "Pilgrimage" },
+  { name: "Varanasi", slug: "varanasi", type: "pilgrimage", image: "/destinactions/Varanasi/varanasi.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
 ]
 
 export default function DestinationsPage() {
-  const [filter, setFilter] = useState<"all" | "domestic" | "international">("all")
+  const [filter, setFilter] = useState<
+    "all" | "domestic" | "international" | "honeymoon" | "pilgrimage">("all")
   const [searchQuery, setSearchQuery] = useState("")
 
   const filteredDestinations = allDestinations.filter((dest) => {
@@ -91,15 +107,16 @@ export default function DestinationsPage() {
                 { key: "all", label: "All" },
                 { key: "domestic", label: "Domestic" },
                 { key: "international", label: "International" },
+                { key: "honeymoon", label: "Honeymoon" },
+                { key: "pilgrimage", label: "Pilgrimage" },
               ].map((tab) => (
                 <button
                   key={tab.key}
                   onClick={() => setFilter(tab.key as typeof filter)}
-                  className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                    filter === tab.key
+                  className={`px-6 py-2 rounded-lg font-medium transition-all ${filter === tab.key
                       ? "bg-primary text-white shadow"
                       : "text-muted-foreground hover:text-foreground"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -127,7 +144,7 @@ export default function DestinationsPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  
+
                   {/* Tags */}
                   <div className="absolute top-4 left-4 flex gap-2">
                     <span className="px-3 py-1 bg-secondary text-white text-xs font-semibold rounded-full">
