@@ -45,7 +45,7 @@ const allDestinations = [
   { name: "Kedarnath", slug: "kedarnath", type: "pilgrimage", image: "/destinactions/Kedarnath/Kedarnath3.jpg", rating: 4.9, duration: "4-6 Days", tag: "Pilgrimage" },
   { name: "Badrinath", slug: "badrinath", type: "pilgrimage", image: "/destinactions/Badrinath/Badrinath2.jpg", rating: 4.9, duration: "3-5 Days", tag: "Pilgrimage" },
   // { name: "Vaishno Devi", slug: "vaishno-devi", type: "pilgrimage", image: "/destinactions/VaishnoDevi/vaishno.jpg", rating: 4.9, duration: "2-3 Days", tag: "Pilgrimage" },
-  { name: "Varanasi", slug: "varanasi", type: "pilgrimage", image: "/destinactions/Varanasi/Varanasi2.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
+  { name: "Varanasi", slug: "varanasi", type: "pilgrimage", image: "/destinactions/varanasi/varanasi2.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
 ]
 
 export default function DestinationsPage() {
