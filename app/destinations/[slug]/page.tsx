@@ -41,18 +41,19 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[500px]">
-        <Image
-          src={destination.heroImage}
-          alt={destination.name}
-          fill
-          className="object-cover "
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50 from-black/80 via-black/40 to-transparent" />
+      <section className="relative min-h-[100vh]">
+  <Image
+    src={destination.heroImage}
+    alt={destination.name}
+    fill
+    className="object-cover"
+    priority
+  />
 
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-16 ">
+  <div className="absolute inset-0 bg-black/50" />
+
+  <div className="relative z-10 container mx-auto px-4 pt-32 pb-20 flex flex-col justify-center h-full">
+    <div className="max-w-3xl">
             {/* <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors">
               <ChevronLeft className="h-5 w-5" />
               Back to Home

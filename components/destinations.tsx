@@ -129,7 +129,7 @@ const honeymoonDestinations = [
   {
     name: "Manali",
     slug: "manali",
-    image: "/destinactions/Manali/Manali2.jpg",
+    image: "/destinactions/Manali/Manali3.jpg",
     rating: 4.8,
     duration: "4-6 Days",
     tag: "Honeymoon",
@@ -137,7 +137,7 @@ const honeymoonDestinations = [
   {
     name: "Andaman",
     slug: "andaman_nicobar",
-    image: "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=800&q=80",
+    image: "/destinactions/Andaman/Andaman2.jpg",
     rating: 4.8,
     duration: "5-7 Days",
     tag: "Honeymoon",
