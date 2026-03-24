@@ -11,7 +11,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 const pilgrimageDestinations = [
   "Tirupati", "Sabarimala", "Rameswaram", "Kedarnath", "Badrinath",
@@ -55,8 +60,8 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
-        : "bg-black/40 py-4"
+        ? "bg-white/95 backdrop-blur-md shadow-lg py-1"
+        : "bg-black/40 py-1"
         }`}
     >
       <div className="container mx-auto px-4">
@@ -68,7 +73,7 @@ export function Header() {
               alt="GoBuddy Holidays"
               width={200}
               height={80}
-              className="h-16 w-auto md:h-16"
+              className="h-24 w-auto md:h-24"
             />
           </Link>
 
@@ -218,15 +223,30 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" size="sm" className="gap-2 bg-white/10 border-secondary/30 text-secondary hover:bg-primary hover:text-white">
-                <MapPin className="h-4 w-4" />
-              </Button>
-            </Link>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href="https://www.google.com/maps?q=35+Peddu+Street+Kondithope+George+Town+Chennai+600001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2 bg-white/10 border-secondary/30 text-secondary hover:bg-primary hover:text-white"
+                    >
+                      <MapPin className="h-4 w-4" />
+
+                    </Button>
+                  </Link>
+                </TooltipTrigger>
+
+                <TooltipContent>
+                  <p>Open location in Google Maps</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
             <Link href='/contact'>
               <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-white gap-2">
                 <Plane className="h-4 w-4" />

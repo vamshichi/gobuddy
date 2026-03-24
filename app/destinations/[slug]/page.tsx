@@ -49,7 +49,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
           className="object-cover "
           priority
         />
-        <div className="absolute inset-0 bg-black/80 from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/50 from-black/80 via-black/40 to-transparent" />
 
         <div className="absolute inset-0 flex items-end">
           <div className="container mx-auto px-4 pb-16 ">
