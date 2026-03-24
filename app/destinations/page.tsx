@@ -137,13 +137,13 @@ export default function DestinationsPage() {
                 className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-border"
               >
                 <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={dest.image}
-                    alt={dest.name}
-                    fill
-                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                 <Image
+  src={dest.image}
+  alt={dest.name}
+  fill
+  unoptimized
+  className="object-cover"
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
                   {/* Tags */}
