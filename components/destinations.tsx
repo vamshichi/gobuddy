@@ -129,7 +129,7 @@ const honeymoonDestinations = [
   {
     name: "Manali",
     slug: "manali",
-    image: "/destinactions/Manali/Manali3.jpg",
+    image: "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg",
     rating: 4.8,
     duration: "4-6 Days",
     tag: "Honeymoon",

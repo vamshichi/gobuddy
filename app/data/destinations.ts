@@ -768,11 +768,11 @@ export const destinationsData: Record<string, {
         tagline: "Valley of the Gods",
         description:
             "Manali is adventure and serenity poured into one Himalayan valley — roaring Beas River, snow-capped Rohtang Pass, ancient Hadimba Temple hidden in deodar forests, the buzz of Kasol backpacker cafes, and winter ski slopes that draw thrill-seekers from across India.",
-        heroImage: "/destinactions/manali/manali4.jpg",
+        heroImage: "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg",
         images: [
-            "/destinactions/manali/manali2.jpg",
-            "/destinactions/manali/manali1.jpg",
-            "/destinactions/manali/manali3.jpg",
+            "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg",
+            "https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg",
+            "https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg",
         ],
         rating: 4.7,
         duration: "5-7 Days",
