@@ -19,7 +19,7 @@ const faqs = [
   { question: "How do I book a travel package?", answer: "You can book directly through our website, call us, or send a WhatsApp message. Our team will guide you through the entire process." },
   { question: "What payment methods do you accept?", answer: "We accept all major credit/debit cards, UPI, net banking, and EMI options on select packages." },
   { question: "Can I customize my travel package?", answer: "Absolutely! We specialize in creating personalized itineraries based on your preferences, budget, and travel dates." },
-  { question: "add cancellation policy More than 21 days before departure: 30% cancellation charges. Within 21 days of departure: Non Refundable." },
+  { question: "What is your cancellation policy?", answer: "add cancellation policy More than 21 days before departure: 30% cancellation charges. Within 21 days of departure: Non Refundable." },
 ]
 
 export default function ContactPage() {
