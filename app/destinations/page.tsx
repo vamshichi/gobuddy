@@ -114,8 +114,8 @@ export default function DestinationsPage() {
                   key={tab.key}
                   onClick={() => setFilter(tab.key as typeof filter)}
                   className={`px-6 py-2 rounded-lg font-medium transition-all ${filter === tab.key
-                      ? "bg-primary text-white shadow"
-                      : "text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-white shadow"
+                    : "text-muted-foreground hover:text-foreground"
                     }`}
                 >
                   {tab.label}
@@ -141,6 +141,7 @@ export default function DestinationsPage() {
                     src={dest.image}
                     alt={dest.name}
                     fill
+                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
