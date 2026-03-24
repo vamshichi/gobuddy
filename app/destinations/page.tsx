@@ -137,13 +137,15 @@ export default function DestinationsPage() {
                 className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-border"
               >
                 <div className="relative h-56 overflow-hidden">
-                 <Image
-  src={dest.image}
-  alt={dest.name}
-  fill
-  unoptimized
-  className="object-cover"
-/>
+                  <Image
+                    src={dest.image}
+                    alt={dest.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "/placeholder-destination.jpg"
+                    }}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
                   {/* Tags */}
