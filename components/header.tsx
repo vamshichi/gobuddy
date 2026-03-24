@@ -318,7 +318,23 @@ export function Header() {
                   ))}
                 </div>
 
-                <div className="border-b pb-2">
+               
+
+                <p className="text-xs font-medium text-muted-foreground mb-1">International</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {honeymoonInternational.map((dest) => (
+                    <Link
+                      key={dest}
+                      href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
+                      className="text-sm text-muted-foreground hover:text-primary"
+                    >
+                      {dest}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+               <div className="border-b pb-2">
                   <p className="font-semibold text-primary mb-2">Pilgrimage Destinations</p>
                   <div className="grid grid-cols-2 gap-2">
                     {pilgrimageDestinations.map((dest) => (
@@ -334,20 +350,6 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-
-                <p className="text-xs font-medium text-muted-foreground mb-1">International</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {honeymoonInternational.map((dest) => (
-                    <Link
-                      key={dest}
-                      href={`/destinations/${dest.toLowerCase().replace(/ /g, "-")}`}
-                      className="text-sm text-muted-foreground hover:text-primary"
-                    >
-                      {dest}
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
               <Link href="/about" className="font-medium text-foreground py-2">
                 About Us
