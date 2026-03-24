@@ -40,12 +40,12 @@ const allDestinations = [
   { name: "Thailand", slug: "thailand", type: "honeymoon", image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", rating: 4.7, duration: "5-7 Days", tag: "Honeymoon" },
 
   // Pilgrimage
-  { name: "Tirupati", slug: "tirupati", type: "pilgrimage", image: "/destinactions/Tirupati/tirupati.jpg", rating: 4.9, duration: "1-2 Days", tag: "Pilgrimage" },
-  { name: "Rameswaram", slug: "rameswaram", type: "pilgrimage", image: "/destinactions/Rameswaram/rameswaram.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
-  { name: "Kedarnath", slug: "kedarnath", type: "pilgrimage", image: "/destinactions/Kedarnath/kedarnath2.jpg", rating: 4.9, duration: "4-6 Days", tag: "Pilgrimage" },
-  { name: "Badrinath", slug: "badrinath", type: "pilgrimage", image: "/destinactions/Badrinath/badrinath.jpg", rating: 4.9, duration: "3-5 Days", tag: "Pilgrimage" },
+  { name: "Tirupati", slug: "tirupati", type: "pilgrimage", image: "/destinactions/Tirupati/tirupati2.jpg", rating: 4.9, duration: "1-2 Days", tag: "Pilgrimage" },
+  { name: "Rameswaram", slug: "rameswaram", type: "pilgrimage", image: "/destinactions/Rameswaram/rameswaram2.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
+  { name: "Kedarnath", slug: "kedarnath", type: "pilgrimage", image: "/destinactions/Kedarnath/kedarnath3.jpg", rating: 4.9, duration: "4-6 Days", tag: "Pilgrimage" },
+  { name: "Badrinath", slug: "badrinath", type: "pilgrimage", image: "/destinactions/Badrinath/badrinath2.jpg", rating: 4.9, duration: "3-5 Days", tag: "Pilgrimage" },
   // { name: "Vaishno Devi", slug: "vaishno-devi", type: "pilgrimage", image: "/destinactions/VaishnoDevi/vaishno.jpg", rating: 4.9, duration: "2-3 Days", tag: "Pilgrimage" },
-  { name: "Varanasi", slug: "varanasi", type: "pilgrimage", image: "/destinactions/Varanasi/varanasi.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
+  { name: "Varanasi", slug: "varanasi", type: "pilgrimage", image: "/destinactions/Varanasi/varanasi2.jpg", rating: 4.8, duration: "2-3 Days", tag: "Pilgrimage" },
 ]
 
 export default function DestinationsPage() {
