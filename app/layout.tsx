@@ -3,6 +3,7 @@ import { Poppins, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import FlightLoader from "@/components/FlightLoader"
 import './globals.css'
+import Script from "next/script"
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -47,6 +48,19 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={`${poppins.variable} ${montserrat.variable} font-sans antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SNZQN9ZM4K"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SNZQN9ZM4K');
+          `}
+        </Script>
          {/* <FlightLoader /> */}
         {children}
         <Analytics />
