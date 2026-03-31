@@ -31,11 +31,11 @@ const internationalLinks = [
 ]
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61575439976445", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/gobuddyholidays?igsh=cDd6cm82dmJjcDRm&utm_source=qr", label: "Instagram" },
+  // { icon: Twitter, href: "https://twitter.com/gobuddyholidays", label: "Twitter" },
+  // { icon: Youtube, href: "https://www.youtube.com/@gobuddyholidays", label: "YouTube" },
+  // { icon: Linkedin, href: "https://www.linkedin.com/company/gobuddyholidays", label: "LinkedIn" },
 ]
 
 export function Footer() {

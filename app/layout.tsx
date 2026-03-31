@@ -18,19 +18,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gobuddy-holidays.vercel.app'),
+  metadataBase: new URL('https://www.gobuddyholidays.com/'),
   title: 'GoBuddy Holidays | Your Trusted Travel Companion',
   description: 'GoBuddy Holidays offers customized holiday packages, flight and hotel bookings, group tours and corporate travel. Explore domestic and international destinations with us.',
   keywords: 'travel, holidays, vacation, tours, flights, hotels, GoBuddy, travel packages, domestic travel, international travel',
-  generator: 'v0.app',
+  generator: 'vamshi',
   icons: {
-    icon: '/images/logo.jpeg',
-    apple: '/images/logo.jpeg',
+    icon: '/images/gb-logo.png',
+    apple: '/images/gb-logo.png',
   },
   openGraph: {
     title: 'GoBuddy Holidays | Your Trusted Travel Companion',
     description: 'Make every journey simple, enjoyable, and memorable with GoBuddy Holidays.',
-    images: ['/images/logo.jpeg'],
+    images: ['/images/gb-logo.png'],
   },
 }
 
